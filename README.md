@@ -94,7 +94,7 @@ Người dùng có thể:
 ---
 
 ### 🏁 Kết luận
-Ứng dụng **Ôn Thi GPLX A1, A** không chỉ giúp người dùng học nhanh – nhớ lâu mà còn góp phần hiện đại hoá phương pháp ôn tập truyền thống, hướng tới mục tiêu **“Học hiệu quả – Thi dễ dàng – Đạt kết quả cao”**.
+Ứng dụng **Ôn Thi GPLX A, A1** không chỉ giúp người dùng học nhanh – nhớ lâu mà còn góp phần hiện đại hoá phương pháp ôn tập truyền thống, hướng tới mục tiêu **“Học hiệu quả – Thi dễ dàng – Đạt kết quả cao”**.
 
 ---
 
