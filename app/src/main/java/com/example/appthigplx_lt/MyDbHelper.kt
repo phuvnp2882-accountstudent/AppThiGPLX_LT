@@ -1876,6 +1876,15 @@ class MyDbHelper(context: Context) :
                     dapAnDung = "4",
                     chuDe = "Kỹ thuật lái xe"
                 ),
+                LyThuyet(
+                    cauHoi = "Trường hợp này xe nào được quyền đi trước?",
+                    dapAn1 = "Xe mô tô",
+                    dapAn2 = "Xe con.",
+                    dapAn3 = "",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    chuDe = "Sa Hình"
+                ),
 
                 )
             cursor.close()
