@@ -1237,7 +1237,6 @@ class MyDbHelper(context: Context) :
                     dapAnDung = "4",
                     chuDe = "Kỹ thuật lái xe"
                 ),
-
                 )
             cursor.close()
             list.forEach { insertLyThuyet(it) }
