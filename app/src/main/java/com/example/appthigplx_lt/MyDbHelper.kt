@@ -822,6 +822,421 @@ class MyDbHelper(context: Context) :
                     dapAnDung = "2",
                     chuDe = "Biển báo đường bộ"
                 ),
+                LyThuyet(
+                    cauHoi = "Những hành vi nào sau đây thể hiện là người có văn hóa giao thông?",
+                    dapAn1 = "Luôn tuân thủ pháp luật về trật tự, an toàn giao thông đường bộ, nhường nhịn và giúp đỡ người khác.",
+                    dapAn2 = "Đi nhanh, vượt đèn đỏ nếu không có lực lượng Công an.",
+                    dapAn3 = "Bấm còi và nháy đèn liên tục để cảnh báo xe khác.",
+                    dapAn4 = "Tránh nhường đường để đi nhanh hơn.",
+                    dapAnDung = "1",
+                    chuDe = "Văn hóa và đạo đức lái xe"
+                ),
+
+                LyThuyet(
+                    cauHoi = "Khái niệm về văn hóa giao thông được hiểu như thế nào là đúng?",
+                    dapAn1 = "Là sự hiểu biết và chấp hành nghiêm chỉnh pháp luật về giao thông, là ý thức trách nhiệm với cộng đồng khi tham gia giao thông.",
+                    dapAn2 = "Là sự tôn trọng, nhường nhịn, giúp đỡ và ứng xử có văn hóa giữa những người tham gia giao thông với nhau.",
+                    dapAn3 = "Cả hai ý trên.",
+                    dapAn4 = "",
+                    dapAnDung = "3",
+                    chuDe = "Văn hóa và đạo đức lái xe"
+                ),
+
+                LyThuyet(
+                    cauHoi = "Người lái xe không điều khiển xe đi đúng làn đường quy định, phóng nhanh, vượt ẩu, vượt đèn đỏ, đi vào đường cấm được coi là hành vi nào?",
+                    dapAn1 = "Là thiếu văn hóa giao thông, vi phạm pháp luật về trật tự, an toàn giao thông đường bộ.",
+                    dapAn2 = "Là thiếu văn hóa giao thông.",
+                    dapAn3 = "",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = "Văn hóa và đạo đức lái xe"
+                ),
+
+                LyThuyet(
+                    cauHoi = "Người lái xe có văn hóa giao thông khi tham gia giao thông đường bộ phải đáp ứng các điều kiện nào?",
+                    dapAn1 = "Hiểu biết và chấp hành nghiêm chỉnh pháp luật về giao thông đường bộ; có ý thức trách nhiệm với cộng đồng khi tham gia giao thông; tôn trọng, nhường nhịn, giúp đỡ và ứng xử có văn hóa với những người cùng tham gia giao thông.",
+                    dapAn2 = "Điều khiển xe vượt quá tốc độ, đi không đúng làn đường.",
+                    dapAn3 = "",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = "Văn hóa và đạo đức lái xe"
+                ),
+
+                LyThuyet(
+                    cauHoi = "Người lái xe mô tô có văn hóa giao thông khi tham gia giao thông phải tuân thủ những quy định nào?",
+                    dapAn1 = "Điều khiển xe đi bên phải theo chiều đi của mình; đi đúng phần đường, làn đường quy định; đội mũ bảo hiểm đúng quy chuẩn kỹ thuật quốc gia, cài quai đúng quy cách.",
+                    dapAn2 = "Điều khiển xe đi trên phần đường, làn đường có ít phương tiện tham gia giao thông.",
+                    dapAn3 = "Điều khiển xe và đội mũ bảo hiểm ở nơi có biển báo bắt buộc đội mũ bảo hiểm.",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = "Văn hóa và đạo đức lái xe"
+                ),
+
+                LyThuyet(
+                    cauHoi = "Trong các hành vi dưới đây, người lái xe có văn hóa giao thông phải ứng xử như thế nào?",
+                    dapAn1 = "Điều khiển xe đi bên phải theo chiều đi của mình; đi đúng phần đường, làn đường quy định; dừng, đỗ xe đúng nơi quy định; đã uống rượu, bia thì không lái xe.",
+                    dapAn2 = "Điều khiển xe đi trên phần đường, làn đường có ít phương tiện giao thông; dừng xe, đỗ xe ở nơi thuận tiện hoặc theo yêu cầu của hành khách, của người thân.",
+                    dapAn3 = "Dừng và đỗ xe ở nơi thuận tiện cho việc chuyên chở hành khách và giao nhận hàng hóa; sử dụng ít rượu, bia thì có thể lái xe.",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = "Văn hóa và đạo đức lái xe"
+                ),
+
+                LyThuyet(
+                    cauHoi = "Khi tham gia giao thông, việc sử dụng còi xe nên dùng như thế nào để thể hiện là người có văn hóa giao thông?",
+                    dapAn1 = "Chỉ bấm còi khi thật sự cần thiết, không bấm còi liên tục hoặc kéo dài, sử dụng còi với mức âm lượng theo quy định.",
+                    dapAn2 = "Bấm còi liên tục để các xe khác nhường đường.",
+                    dapAn3 = "Bấm còi to khi đi qua khu vực đông dân cư.",
+                    dapAn4 = "Không cần dùng còi, tránh gây tiếng ồn là văn minh.",
+                    dapAnDung = "1",
+                    chuDe = "Văn hóa và đạo đức lái xe"
+                ),
+
+                LyThuyet(
+                    cauHoi = "Người điều khiển phương tiện tham gia giao thông đường bộ gây ra tai nạn giao thông đường bộ có trách nhiệm gì?",
+                    dapAn1 = "Dừng ngay phương tiện, cảnh báo nguy hiểm, giữ nguyên hiện trường, trợ giúp người bị nạn và báo tin cho cơ quan Công an, cơ sở khám bệnh, chữa bệnh.",
+                    dapAn2 = "Ở lại hiện trường vụ tai nạn giao thông đường bộ cho đến khi người của cơ quan Công an đến, trừ trường hợp phải đi cấp cứu, đưa người bị nạn đi cấp cứu hoặc xét thấy bị đe dọa đến tính mạng, sức khỏe nhưng phải đến trình báo ngay cơ quan Công an, Ủy ban nhân dân nơi gần nhất.",
+                    dapAn3 = "Cung cấp thông tin xác định danh tính về bản thân, người liên quan đến vụ tai nạn giao thông đường bộ và thông tin liên quan của vụ tai nạn giao thông đường bộ cho cơ quan có thẩm quyền.",
+                    dapAn4 = "Cả ba ý trên.",
+                    dapAnDung = "4",
+                    chuDe = "Văn hóa và đạo đức lái xe"
+                ),
+
+                LyThuyet(
+                    cauHoi = "Người có mặt tại nơi xảy ra vụ tai nạn giao thông đường bộ có trách nhiệm gì?",
+                    dapAn1 = "Giúp đỡ, cứu chữa kịp thời người bị nạn; báo tin ngay cho cơ quan Công an, cơ sở khám bệnh, chữa bệnh hoặc Ủy ban nhân dân nơi gần nhất; tham gia bảo vệ hiện trường; tham gia bảo vệ tài sản của người bị nạn; cung cấp thông tin liên quan về vụ tai nạn theo yêu cầu của cơ quan có thẩm quyền.",
+                    dapAn2 = "Chụp lại hình ảnh vụ tai nạn (nếu có thiết bị ghi hình) và nhanh chóng rời khỏi hiện trường vụ tai nạn.",
+                    dapAn3 = "",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = "Văn hóa và đạo đức lái xe"
+                ),
+
+                LyThuyet(
+                    cauHoi = "Trong đoạn đường hai chiều tại khu đông dân cư đang ùn tắc, người điều khiển xe mô tô có văn hóa giao thông sẽ lựa chọn cách xử lý nào?",
+                    dapAn1 = "Cho xe lấn sang làn ngược chiều để nhanh chóng thoát khỏi nơi ùn tắc.",
+                    dapAn2 = "Điều khiển xe trên vỉa hè để nhanh chóng thoát khỏi nơi ùn tắc.",
+                    dapAn3 = "Kiên nhẫn tuân thủ hướng dẫn của người điều khiển giao thông hoặc tín hiệu đèn giao thông, di chuyển trên đúng phần đường bên phải theo chiều đi, nhường đường cho các phương tiện đi ngược chiều.",
+                    dapAn4 = "",
+                    dapAnDung = "3",
+                    chuDe = "Văn hóa và đạo đức lái xe"
+                ),
+
+                LyThuyet(
+                    cauHoi = "Hành vi nào dưới đây bị nghiêm cấm?",
+                    dapAn1 = "Sử dụng xe đạp đi trên các tuyến quốc lộ.",
+                    dapAn2 = "Rải vật sắc nhọn, đổ chất gây trơn trượt trên đường bộ.",
+                    dapAn3 = "Cả hai ý trên.",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    chuDe = "Câu điểm liệt"
+                ),
+                LyThuyet(
+                    cauHoi = "Hành vi đưa xe cơ giới, xe máy chuyên dùng tham gia giao thông đường bộ nào dưới đây bị cấm?",
+                    dapAn1 = "Không có chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường.",
+                    dapAn2 = "Hết niên hạn sử dụng.",
+                    dapAn3 = "Cả hai ý trên.",
+                    dapAn4 = "",
+                    dapAnDung = "3",
+                    chuDe = " Câu điểm liệt "
+                ),
+                LyThuyet(
+                    cauHoi = "Tổ chức đua xe được phép thực hiện khi nào?",
+                    dapAn1 = "Trên đường phố không có người qua lại.",
+                    dapAn2 = "Được người dân ủng hộ.",
+                    dapAn3 = "Được cơ quan có thẩm quyền cấp phép.",
+                    dapAn4 = "",
+                    dapAnDung = "3",
+                    chuDe = " Câu điểm liệt "
+                ),
+                LyThuyet(
+                    cauHoi = "Hành vi đua xe trái phép bị xử lý như thế nào?",
+                    dapAn1 = "Chỉ bị nhắc nhở.",
+                    dapAn2 = "Tùy theo mức độ của hành vi vi phạm có thể bị xử lý hành chính hoặc xử lý hình sự.",
+                    dapAn3 = "",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    chuDe = " Câu điểm liệt "
+                ),
+                LyThuyet(
+                    cauHoi = "Người điều khiển phương tiện tham gia giao thông đường bộ mà trong máu hoặc hơi thở có nồng độ cồn có bị nghiêm cấm không?",
+                    dapAn1 = "Bị nghiêm cấm.",
+                    dapAn2 = "Không bị nghiêm cấm.",
+                    dapAn3 = "Không bị nghiêm cấm, nếu nồng độ cồn trong máu ở mức nhẹ, có thể điều khiển phương tiện tham gia giao thông.",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = " Câu điểm liệt "
+                ),
+                LyThuyet(
+                    cauHoi = "Theo Luật Phòng chống tác hại của rượu, bia, đối tượng nào dưới đây bị cấm sử dụng rượu, bia khi tham gia giao thông?",
+                    dapAn1 = "Người điều khiển xe ô tô, xe mô tô, xe đạp, xe gắn máy.",
+                    dapAn2 = "Người được chở trên xe cơ giới.",
+                    dapAn3 = "Cả hai ý trên.",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = " Câu điểm liệt "
+                ),
+                LyThuyet(
+                    cauHoi = "Hành vi giao xe ô tô, mô tô cho người nào sau đây tham gia giao thông đường bộ bị nghiêm cấm?",
+                    dapAn1 = "Người chưa đủ tuổi theo quy định.",
+                    dapAn2 = "Người không có giấy phép lái xe.",
+                    dapAn3 = "Người có giấy phép lái xe nhưng đã bị trừ hết 12 điểm.",
+                    dapAn4 = "Cả ba ý trên.",
+                    dapAnDung = "4",
+                    chuDe = " Câu điểm liệt "
+                ),
+                LyThuyet(
+                    cauHoi = "Hành vi nào sau đây bị nghiêm cấm?",
+                    dapAn1 = "Điều khiển xe cơ giới lạng lách, đánh võng, rú ga liên tục khi tham gia giao thông trên đường.",
+                    dapAn2 = "Xúc phạm, đe dọa, cản trở, chống đối hoặc không chấp hành hiệu lệnh, hướng dẫn, yêu cầu kiểm tra, kiểm soát của người thi hành công vụ về bảo đảm trật tự, an toàn giao thông đường bộ.",
+                    dapAn3 = "Cả hai ý trên.",
+                    dapAn4 = "",
+                    dapAnDung = "3",
+                    chuDe = " Câu điểm liệt "
+                ),
+                LyThuyet(
+                    cauHoi = "Hành vi nào sau đây bị cấm?",
+                    dapAn1 = "Lắp đặt, sử dụng thiết bị âm thanh, ánh sáng trên xe cơ giới, xe máy chuyên dùng gây mất trật tự, an toàn giao thông đường bộ.",
+                    dapAn2 = "Cản trở người, phương tiện tham gia giao thông trên đường bộ; ném gạch, đất, đá, cát hoặc vật thể khác vào người, phương tiện đang tham gia giao thông trên đường bộ.",
+                    dapAn3 = "Cả hai ý trên.",
+                    dapAn4 = "",
+                    dapAnDung = "3",
+                    chuDe = " Câu điểm liệt "
+                ),
+                LyThuyet(
+                    cauHoi = "Người lái xe được phép vượt xe trên cầu hẹp có một làn đường, đường cong có tầm nhìn bị hạn chế hay không?",
+                    dapAn1 = "Được phép vượt khi đường vắng.",
+                    dapAn2 = "Không được phép vượt.",
+                    dapAn3 = "Được phép vượt khi có việc gấp.",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    chuDe = " Câu điểm liệt "
+                ),
+                LyThuyet(
+                    cauHoi = "Muốn vượt xe phía trước, người lái xe mô tô phải có tín hiệu như thế nào dưới đây để bảo đảm an toàn?",
+                    dapAn1 = "Bấm còi liên tục để xe phía trước biết xe mình xin vượt.",
+                    dapAn2 = "Rú ga liên tục để xe phía trước biết xe mình xin vượt.",
+                    dapAn3 = "Báo hiệu nhấp nháy bằng đèn chiếu sáng phía trước hoặc còi.",
+                    dapAn4 = "",
+                    dapAnDung = "3",
+                    chuDe = " Câu điểm liệt "
+                ),
+                LyThuyet(
+                    cauHoi = "Khi điều khiển phương tiện tham gia giao thông, hành vi nào sau đây bị cấm?",
+                    dapAn1 = "Dùng tay cầm và sử dụng điện thoại hoặc thiết bị điện tử khác.",
+                    dapAn2 = "Chỉ được chở người trên thùng xe ô tô chở hàng trong trường hợp chở người đi làm nhiệm vụ cứu nạn, cứu hộ, phòng, chống thiên tai, dịch bệnh hoặc thực hiện nhiệm vụ khẩn cấp.",
+                    dapAn3 = "",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = " Câu điểm liệt "
+                ),
+                LyThuyet(
+                    cauHoi = "Người lái xe không được vượt xe khác khi gặp trường hợp nào dưới đây?",
+                    dapAn1 = "Trên cầu hẹp có một làn đường; nơi đường giao nhau, đường bộ giao nhau cùng mức với đường sắt; khi gặp xe ưu tiên.",
+                    dapAn2 = "Trên cầu có từ 02 làn xe trở lên.",
+                    dapAn3 = "Trên đường có 02 làn đường được phân chia làn bằng vạch kẻ nét đứt.",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = " Câu điểm liệt "
+                ),
+                LyThuyet(
+                    cauHoi = "Người điều khiển xe mô tô hai bánh, xe mô tô ba bánh, xe gắn máy có được phép sử dụng xe để kéo hoặc đẩy các phương tiện khác khi tham gia giao thông không?",
+                    dapAn1 = "Được phép.",
+                    dapAn2 = "Nếu phương tiện được kéo, đẩy có khối lượng nhỏ hơn phương tiện của mình.",
+                    dapAn3 = "Tùy trường hợp.",
+                    dapAn4 = "Không được phép.",
+                    dapAnDung = "4",
+                    chuDe = " Câu điểm liệt "
+                ),
+                LyThuyet(
+                    cauHoi = "Khi điều khiển xe mô tô hai bánh, xe mô tô ba bánh, xe gắn máy, những hành vi nào sau đây không được phép?",
+                    dapAn1 = "Buông cả hai tay; đứng, nằm trên xe điều khiển xe; sử dụng chân chống hoặc vật khác quệt xuống đường khi xe đang chạy.",
+                    dapAn2 = "Chở tối đa hai người phía sau khi chở người bệnh đi cấp cứu, áp giải người có hành vi vi phạm pháp luật, trẻ em dưới 12 tuổi và người già yếu hoặc người khuyết tật.",
+                    dapAn3 = "",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = " Câu điểm liệt "
+                ),
+                LyThuyet(
+                    cauHoi = "Khi điều khiển xe mô tô hai bánh, xe mô tô ba bánh, xe gắn máy, những hành vi nào sau đây không được phép?",
+                    dapAn1 = "Buông cả hai tay; sử dụng xe để kéo, đẩy xe khác, vật khác; sử dụng chân chống hoặc vật khác quệt xuống đường khi xe đang chạy.",
+                    dapAn2 = "Sử dụng xe để chở người hoặc hàng hóa; để chân chạm xuống đất khi khởi hành.",
+                    dapAn3 = "Đội mũ bảo hiểm; chạy xe đúng tốc độ quy định và chấp hành đúng quy tắc giao thông đường bộ.",
+                    dapAn4 = "Chở người ngồi sau dưới 16 tuổi.",
+                    dapAnDung = "1",
+                    chuDe = " Câu điểm liệt "
+                ),
+                LyThuyet(
+                    cauHoi = "Người lái xe, người được chở trên xe mô tô hai bánh, xe mô tô ba bánh, xe gắn máy phải thực hiện quy định nào dưới đây?",
+                    dapAn1 = "Đội mũ bảo hiểm theo đúng quy chuẩn kỹ thuật quốc gia và cài quai đúng quy cách.",
+                    dapAn2 = "Người lái xe phải đội mũ bảo hiểm, người được chở trên xe không nhất thiết phải đội mũ bảo hiểm.",
+                    dapAn3 = "Phải đội mũ bảo hiểm nhưng không nhất thiết phải cài quai.",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = " Câu điểm liệt "
+                ),
+                LyThuyet(
+                    cauHoi = "Người lái xe mô tô hai bánh, xe mô tô ba bánh, xe gắn máy không được thực hiện các hành vi nào dưới đây?",
+                    dapAn1 = "Đi xe dàn hàng ngang; buông cả hai tay.",
+                    dapAn2 = "Sử dụng xe để kéo, đẩy xe khác, vật khác, dẫn dắt vật nuôi, mang, vác và chở vật cồng kềnh; chở người đứng trên xe, giá đèo hàng hoặc ngồi trên tay lái; xếp hàng hóa trên xe quá giới hạn quy định.",
+                    dapAn3 = "Ngồi về một bên điều khiển xe; đứng, nằm trên xe điều khiển xe; thay người lái xe khi xe đang chạy; quay người về phía sau để điều khiển xe hoặc bịt mắt điều khiển xe; sử dụng chân chống hoặc vật khác quệt xuống đường khi xe đang chạy.",
+                    dapAn4 = "Cả ba ý trên.",
+                    dapAnDung = "4",
+                    chuDe = " Câu điểm liệt "
+                ),
+                LyThuyet(
+                    cauHoi = "Người lái xe mô tô hai bánh, xe mô tô ba bánh, xe gắn máy không được thực hiện các hành vi nào sau đây?",
+                    dapAn1 = "Đi xe dàn hàng ngang; đi xe vào phần đường dành cho người đi bộ và phương tiện khác.",
+                    dapAn2 = "Sử dụng ô, thiết bị âm thanh, trừ thiết bị trợ thính.",
+                    dapAn3 = "Cả hai ý trên.",
+                    dapAn4 = "",
+                    dapAnDung = "3",
+                    chuDe = " Câu điểm liệt "
+                ),
+                LyThuyet(
+                    cauHoi = "Người lái xe mô tô hai bánh, xe mô tô ba bánh, xe gắn máy không được thực hiện hành vi nào sau đây?",
+                    dapAn1 = "Đi trên phần đường, làn đường quy định, chấp hành hiệu lệnh của người điều khiển giao thông, đèn tín hiệu giao thông.",
+                    dapAn2 = "Đi xe dàn hàng ngang, đi xe vào phần đường dành cho người đi bộ.",
+                    dapAn3 = "Cả hai ý trên.",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    chuDe = " Câu điểm liệt "
+                ),
+                LyThuyet(
+                    cauHoi = "Khi điều khiển xe mô tô tay ga xuống đường dốc dài, độ dốc cao, người lái xe cần thực hiện các thao tác nào dưới đây để bảo đảm an toàn?",
+                    dapAn1 = "Giữ tay ga ở mức độ phù hợp, sử dụng phanh trước và phanh sau để giảm tốc độ.",
+                    dapAn2 = "Nhả hết tay ga, tắt động cơ, sử dụng phanh trước và phanh sau để giảm tốc độ.",
+                    dapAn3 = "Sử dụng phanh trước để giảm tốc độ kết hợp với tắt chìa khóa điện của xe.",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = "Kỹ thuật lái xe"
+                ),
+                LyThuyet(
+                    cauHoi = "Khi điều khiển xe trên đường vòng người lái xe cần phải làm gì để bảo đảm an toàn?",
+                    dapAn1 = "Quan sát cẩn thận các chướng ngại vật và báo hiệu bằng coi, đèn; giảm tốc độ tới mức cần thiết, về số thấp và thực hiện quay vòng với tốc độ phù hợp với bán kính cong của đường vòng.",
+                    dapAn2 = "Quan sát cẩn thận các chướng ngại vật và báo hiệu bằng còi, đèn; tăng tốc để nhanh chóng qua đường vòng và giảm tốc độ sau khi qua đường vòng.",
+                    dapAn3 = "",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = "Kỹ thuật lái xe"
+                ),
+                LyThuyet(
+                    cauHoi = "Khi điều khiển xe qua đường sắt, người lái xe cần phải thực hiện các thao tác nào dưới đây để bảo đảm an toàn?",
+                    dapAn1 = "Khi có chuông báo hoặc thanh chắn đã hạ xuống, người lái xe phải dừng xe tạm thời đúng khoảng cách an toàn, kéo phanh tay nếu đường dốc hoặc phải chờ lâu.",
+                    dapAn2 = "Khi không có chuông báo hoặc thanh chắn không hạ xuống, người lái xe cần phải quan sát nếu thấy đủ điều kiện an toàn thì về số thấp, tăng ga nhẹ và không thay đổi số trong quá trình vượt qua đường sắt để tránh động cơ chết máy cho xe cho vượt qua.",
+                    dapAn3 = "Cả hai ý trên.",
+                    dapAn4 = "",
+                    dapAnDung = "3",
+                    chuDe = "Kỹ thuật lái xe"
+                ),
+                LyThuyet(
+                    cauHoi = "Trong các loại nhiên liệu dưới đây, loại nhiên liệu nào giảm thiểu ô nhiễm môi trường?",
+                    dapAn1 = "Xăng và dầu diesel.",
+                    dapAn2 = "Xăng sinh học và khí sinh học.",
+                    dapAn3 = "Ý 1 và ý 2.",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    chuDe = "Kỹ thuật lái xe"
+                ),
+                LyThuyet(
+                    cauHoi = "Các biện pháp tiết kiệm nhiên liệu khi chạy xe?",
+                    dapAn1 = "Bảo dưỡng xe theo định kỳ và có kế hoạch lộ trình trước khi xe chạy.",
+                    dapAn2 = "Kiểm tra áp suất lốp theo quy định và chạy xe với tốc độ phù hợp với tình trạng mặt đường và mật độ giao thông trên đường.",
+                    dapAn3 = "Cả hai ý trên.",
+                    dapAn4 = "",
+                    dapAnDung = "3",
+                    chuDe = "Kỹ thuật lái xe"
+                ),
+                LyThuyet(
+                    cauHoi = "Khi tầm nhìn bị hạn chế bởi sương mù hoặc mưa to, người lái xe phải thực hiện các thao tác nào để bảo đảm an toàn?",
+                    dapAn1 = "Tăng tốc độ, chạy gần xe trước, nhìn đèn hậu để định hướng.",
+                    dapAn2 = "Giảm tốc độ, chạy cách xa xe trước với khoảng cách an toàn, bật đèn sương mù và đèn chiếu gần.",
+                    dapAn3 = "Tăng tốc độ, bật đèn pha vượt qua xe chạy trước.",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    chuDe = "Kỹ thuật lái xe"
+                ),
+                LyThuyet(
+                    cauHoi = "Khi đèn pha của xe đi ngược chiều gây chói mắt, làm giảm khả năng quan sát trên đường, người lái xe xử lý như thế nào dưới đây để bảo đảm an toàn?",
+                    dapAn1 = "Giảm tốc độ, giữ vững tay lái, nhìn chếch sang lề đường bên phải.",
+                    dapAn2 = "Bật đèn pha chiếu xa và giữ nguyên tốc độ.",
+                    dapAn3 = "Tăng tốc độ, bật đèn pha đối diện xe phía trước.",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = "Kỹ thuật lái xe"
+                ),
+                LyThuyet(
+                    cauHoi = "Để đạt được hiệu quả phanh cao nhất, người lái xe mô tô phải sử dụng các kỹ năng như thế nào dưới đây?",
+                    dapAn1 = "Sử dụng phanh trước.",
+                    dapAn2 = "Sử dụng phanh sau.",
+                    dapAn3 = "Giảm hết ga, sử dụng đồng thời cả phanh sau và phanh trước.",
+                    dapAn4 = "",
+                    dapAnDung = "3",
+                    chuDe = "Kỹ thuật lái xe"
+                ),
+                LyThuyet(
+                    cauHoi = "Khi đang lái xe mô tô hoặc ô tô, nếu có nhu cầu sử dụng điện thoại để nhắn tin hoặc gọi điện, người lái xe phải thực hiện như thế nào trong các tình huống nêu dưới đây?",
+                    dapAn1 = "Giảm tốc độ để bảo đảm an toàn với xe phía trước và sử dụng điện thoại để liên lạc.",
+                    dapAn2 = "Giảm tốc độ để dừng xe ở nơi cho phép sau đó sử dụng điện thoại để liên lạc.",
+                    dapAn3 = "Tăng tốc độ để cách xa xe phía sau và sử dụng điện thoại để liên lạc.",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    chuDe = "Kỹ thuật lái xe"
+                ),
+                LyThuyet(
+                    cauHoi = "Những thói quen nào dưới đây khi điều khiển xe mô tô tay ga tham gia giao thông dễ gây tai nạn nguy hiểm?",
+                    dapAn1 = "Sử dụng còi.",
+                    dapAn2 = "Phanh đồng thời cả phanh trước và phanh sau.",
+                    dapAn3 = "Chỉ sử dụng phanh trước.",
+                    dapAn4 = "",
+                    dapAnDung = "3",
+                    chuDe = "Kỹ thuật lái xe"
+                ),
+                LyThuyet(
+                    cauHoi = "Khi điều khiển xe mô tô quay đầu, người lái xe cần thực hiện như thế nào để bảo đảm an toàn?",
+                    dapAn1 = "Bật tín hiệu báo rẽ trước khi quay đầu, từ từ giảm tốc độ đến mức có thể dừng lại.",
+                    dapAn2 = "Chỉ quay đầu xe tại những nơi được phép quay đầu.",
+                    dapAn3 = "Quan sát an toàn các phương tiện tới từ phía trước, phía sau, hai bên đồng thời nhường đường cho xe từ bên phải và phía trước đi tới.",
+                    dapAn4 = "Cả ba ý trên.",
+                    dapAnDung = "4",
+                    chuDe = "Kỹ thuật lái xe"
+                ),
+                LyThuyet(
+                    cauHoi = "Tay ga trên xe mô tô hai bánh có tác dụng gì dưới đây?",
+                    dapAn1 = "Để điều khiển xe chạy về phía trước.",
+                    dapAn2 = "Để điều tiết công suất động cơ qua đó điều khiển tốc độ của xe.",
+                    dapAn3 = "Để điều khiển xe chạy lùi.",
+                    dapAn4 = "Ý 1 và ý 2.",
+                    dapAnDung = "4",
+                    chuDe = "Kỹ thuật lái xe"
+                ),
+                LyThuyet(
+                    cauHoi = "Gương chiếu hậu của xe mô tô hai bánh có tác dụng gì dưới đây?",
+                    dapAn1 = "Để quan sát an toàn phía bên trái khi chuẩn bị rẽ trái.",
+                    dapAn2 = "Để quan sát an toàn phía bên phải khi chuẩn bị rẽ phải.",
+                    dapAn3 = "Để quan sát an toàn phía sau của bên trái và bên phải trước khi chuyển hướng.",
+                    dapAn4 = "Để quan sát an toàn phía trước cả bên trái và bên phải trước khi chuyển hướng.",
+                    dapAnDung = "3",
+                    chuDe = "Kỹ thuật lái xe"
+                ),
+                LyThuyet(
+                    cauHoi = "Để bảo đảm an toàn khi tham gia giao thông, người lái xe mô tô hai bánh cần điều khiển tay ga như thế nào?",
+                    dapAn1 = "Tăng ga thật mạnh, giảm ga từ từ.",
+                    dapAn2 = "Tăng ga thật mạnh, giảm ga thật nhanh.",
+                    dapAn3 = "Tăng ga từ từ, giảm ga thật nhanh.",
+                    dapAn4 = "Tăng ga từ từ, giảm ga từ từ.",
+                    dapAnDung = "3",
+                    chuDe = "Kỹ thuật lái xe"
+                ),
+                LyThuyet(
+                    cauHoi = "Để tránh đổ, ngã khi điều khiển xe mô tô hai bánh ở nơi đường xấu, nhỏ và hẹp, người lái xe cần xử lý như thế nào?",
+                    dapAn1 = "Đi ở tốc độ thấp, quan sát liên tục khoảng cách từ 05 m đến 10 m phía trước để điều chỉnh sớm hướng di chuyển.",
+                    dapAn2 = "Trong quá trình di chuyển không nên dùng phanh trước tránh làm khóa bánh dẫn hướng.",
+                    dapAn3 = "Không được lắc người sang trái hoặc phải nhiều, trọng tâm cơ thể cần trùng với trọng tâm của xe.",
+                    dapAn4 = "Cả ba ý trên.",
+                    dapAnDung = "4",
+                    chuDe = "Kỹ thuật lái xe"
+                ),
 
                 )
             cursor.close()
