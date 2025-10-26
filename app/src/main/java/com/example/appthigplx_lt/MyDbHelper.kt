@@ -1010,126 +1010,17 @@ class MyDbHelper(context: Context) :
                     dapAnDung = "1",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
-
                 LyThuyet(
-                    cauHoi = "Biển nào cấm máy kéo đi vào?",
-                    dapAn1 = "Biển 1.",
-                    dapAn2 = "Biển 2 và Biển 3.",
-                    dapAn3 = "Biển 1 và Biển 3.",
-                    dapAn4 = "Cả ba biển.",
+                    cauHoi = "Biển nào cấm máy kéo?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2 và 3",
+                    dapAn3 = "Biển 1 và 3",
+                    dapAn4 = "Cả ba biển",
                     dapAnDung = "2",
                     chuDe = "Biển báo đường bộ"
                 ),
                 LyThuyet(
                     cauHoi = "Biển nào báo hiệu cấm xe mô tô ba bánh đi vào?",
-                    dapAn1 = "Biển 1 và Biển 2.",
-                    dapAn2 = "Biển 1 và Biển 3.",
-                    dapAn3 = "Biển 2 và Biển 3.",
-                    dapAn4 = "",
-                    dapAnDung = "1",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Biển nào dưới đây xe gắn máy được phép đi vào?",
-                    dapAn1 = "Biển 1.",
-                    dapAn2 = "Biển 2.",
-                    dapAn3 = "Cả hai biển.",
-                    dapAn4 = "",
-                    dapAnDung = "2",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Biển nào báo hiệu cấm xe mô tô hai bánh đi vào?",
-                    dapAn1 = "Biển 1.",
-                    dapAn2 = "Biển 2.",
-                    dapAn3 = "Biển 3.",
-                    dapAn4 = "",
-                    dapAnDung = "1",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Gặp biển nào thì xe mô tô hai bánh được đi vào?",
-                    dapAn1 = "Không biển nào.",
-                    dapAn2 = "Biển 1 và Biển 2.",
-                    dapAn3 = "Biển 2 và Biển 3.",
-                    dapAn4 = "Cả ba biển.",
-                    dapAnDung = "3",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Biển nào cấm quay xe?",
-                    dapAn1 = "Biển 1",
-                    dapAn2 = "Biển 2",
-                    dapAn3 = "Không biển nào",
-                    dapAn4 = "Cả hai biển",
-                    dapAnDung = "2",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Biển nào báo hiệu cấm mô tô và xe gắn máy đi vào?",
-                    dapAn1 = "Biển 1",
-                    dapAn2 = "Biển 2",
-                    dapAn3 = "Cả hai biển",
-                    dapAn4 = "",
-                    dapAnDung = "3",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Biển nào dưới đây báo hiệu cấm xe mô tô ba bánh đi vào?",
-                    dapAn1 = "Biển 1",
-                    dapAn2 = "Biển 2",
-                    dapAn3 = "Biển 3",
-                    dapAn4 = "",
-                    dapAnDung = "1",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Biển nào cấm đi ngược chiều?",
-                    dapAn1 = "Biển 1",
-                    dapAn2 = "Biển 2",
-                    dapAn3 = "Cả hai biển",
-                    dapAn4 = "",
-                    dapAnDung = "1",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Biển nào cấm xe công nông đi vào?",
-                    dapAn1 = "Biển 1 và 3",
-                    dapAn2 = "Biển 2 và 3",
-                    dapAn3 = "Biển 1 và 2",
-                    dapAn4 = "",
-                    dapAnDung = "2",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Biển nào cấm xe tải đi vào?",
-                    dapAn1 = "Biển 1",
-                    dapAn2 = "Biển 2",
-                    dapAn3 = "Biển 3",
-                    dapAn4 = "",
-                    dapAnDung = "2",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Biển nào dưới đây cấm xe mô tô hai bánh đi vào?",
-                    dapAn1 = "Biển 1",
-                    dapAn2 = "Biển 2",
-                    dapAn3 = "Biển 3",
-                    dapAn4 = "",
-                    dapAnDung = "3",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Biển nào báo hiệu cấm các loại xe cơ giới đi vào trừ xe gắn máy và xe thô sơ?",
-                    dapAn1 = "Biển 1",
-                    dapAn2 = "Biển 2",
-                    dapAn3 = "Biển 3",
-                    dapAn4 = "",
-                    dapAnDung = "1",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Biển nào cấm mô tô ba bánh đi vào?",
                     dapAn1 = "Biển 1 và 2",
                     dapAn2 = "Biển 1 và 3",
                     dapAn3 = "Biển 2 và 3",
@@ -1138,205 +1029,7 @@ class MyDbHelper(context: Context) :
                     chuDe = "Biển báo đường bộ"
                 ),
                 LyThuyet(
-                    cauHoi = "Biển nào dưới đây cấm tất cả các loại phương tiện cơ giới đi vào trừ xe mô tô hai bánh?",
-                    dapAn1 = "Biển 1",
-                    dapAn2 = "Biển 2",
-                    dapAn3 = "Biển 3",
-                    dapAn4 = "",
-                    dapAnDung = "2",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Biển nào dưới đây cấm xe mô tô ba bánh đi vào?",
-                    dapAn1 = "Biển 1",
-                    dapAn2 = "Biển 2",
-                    dapAn3 = "Biển 3",
-                    dapAn4 = "",
-                    dapAnDung = "1",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Gặp biển nào thì người lái xe được phép quay đầu?",
-                    dapAn1 = "Biển 1",
-                    dapAn2 = "Biển 2",
-                    dapAn3 = "Không biển nào",
-                    dapAn4 = "",
-                    dapAnDung = "1",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Biển nào cho phép rẽ trái?",
-                    dapAn1 = "Biển 1",
-                    dapAn2 = "Biển 2",
-                    dapAn3 = "Biển 3",
-                    dapAn4 = "",
-                    dapAnDung = "2",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Biển nào cấm xe chở hàng nguy hiểm đi vào?",
-                    dapAn1 = "Biển 1",
-                    dapAn2 = "Biển 2",
-                    dapAn3 = "Biển 3",
-                    dapAn4 = "",
-                    dapAnDung = "3",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Biển nào báo hiệu đường cấm đi cả hai hướng?",
-                    dapAn1 = "Biển 1",
-                    dapAn2 = "Biển 2",
-                    dapAn3 = "Biển 3",
-                    dapAn4 = "",
-                    dapAnDung = "1",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Biển nào sau đây cấm taxi đi vào?",
-                    dapAn1 = "Biển 1",
-                    dapAn2 = "Biển 2",
-                    dapAn3 = "Biển 3",
-                    dapAn4 = "",
-                    dapAnDung = "3",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Các biển nào dưới đây cấm xe ô tô tải?",
-                    dapAn1 = "Biển 1 và 2",
-                    dapAn2 = "Biển 2 và 3",
-                    dapAn3 = "Biển 1 và 3",
-                    dapAn4 = "",
-                    dapAnDung = "1",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Biển nào báo hiệu cấm xe kéo rơ-moóc đi vào?",
-                    dapAn1 = "Biển 1",
-                    dapAn2 = "Biển 2",
-                    dapAn3 = "Biển 3",
-                    dapAn4 = "",
-                    dapAnDung = "2",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Khi gặp biển này, phương tiện nào được phép đi vào?",
-                    dapAn1 = "Chỉ xe mô tô hai bánh",
-                    dapAn2 = "Chỉ xe thô sơ",
-                    dapAn3 = "Xe mô tô hai bánh và xe thô sơ",
-                    dapAn4 = "",
-                    dapAnDung = "2",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Biển nào sau đây báo hiệu cấm ô tô và xe máy đi vào?",
-                    dapAn1 = "Biển 1",
-                    dapAn2 = "Biển 2",
-                    dapAn3 = "Biển 3",
-                    dapAn4 = "",
-                    dapAnDung = "1",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Biển nào sau đây báo hiệu cấm người đi bộ?",
-                    dapAn1 = "Biển 1",
-                    dapAn2 = "Biển 2",
-                    dapAn3 = "Biển 3",
-                    dapAn4 = "",
-                    dapAnDung = "2",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Các biển nào dưới đây cấm xe mô tô ba bánh đi vào?",
-                    dapAn1 = "Biển 1 và 2",
-                    dapAn2 = "Biển 2 và 3",
-                    dapAn3 = "Biển 1 và 3",
-                    dapAn4 = "",
-                    dapAnDung = "1",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Biển nào cấm xe thô sơ?",
-                    dapAn1 = "Biển 1",
-                    dapAn2 = "Biển 2",
-                    dapAn3 = "Biển 3",
-                    dapAn4 = "",
-                    dapAnDung = "3",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Các biển nào dưới đây báo hiệu cấm xe ô tô khách?",
-                    dapAn1 = "Biển 1 và 3",
-                    dapAn2 = "Biển 2 và 3",
-                    dapAn3 = "Biển 1 và 2",
-                    dapAn4 = "",
-                    dapAnDung = "3",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Các biển nào dưới đây cấm rẽ trái?",
-                    dapAn1 = "Biển 1",
-                    dapAn2 = "Biển 2",
-                    dapAn3 = "Biển 3",
-                    dapAn4 = "",
-                    dapAnDung = "2",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Biển nào dưới đây báo hiệu cấm xe mô tô hai bánh và mô tô ba bánh đi vào?",
-                    dapAn1 = "Biển 1",
-                    dapAn2 = "Biển 2",
-                    dapAn3 = "Biển 3",
-                    dapAn4 = "",
-                    dapAnDung = "1",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Biển nào cấm quay đầu xe?",
-                    dapAn1 = "Biển 1",
-                    dapAn2 = "Biển 2",
-                    dapAn3 = "Không biển nào",
-                    dapAn4 = "",
-                    dapAnDung = "1",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Biển nào dưới đây báo hiệu chiều dài đoạn đường hạn chế?",
-                    dapAn1 = "Biển 1",
-                    dapAn2 = "Biển 2",
-                    dapAn3 = "Biển 3",
-                    dapAn4 = "",
-                    dapAnDung = "2",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Biển nào dưới đây cấm xe ô tô rẽ trái?",
-                    dapAn1 = "Biển 1",
-                    dapAn2 = "Biển 2",
-                    dapAn3 = "Biển 3",
-                    dapAn4 = "",
-                    dapAnDung = "3",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Biển nào báo hiệu cấm đi thẳng và cấm rẽ trái?",
-                    dapAn1 = "Biển 1",
-                    dapAn2 = "Biển 2",
-                    dapAn3 = "Biển 3",
-                    dapAn4 = "",
-                    dapAnDung = "2",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Biển nào dưới đây báo hiệu chiều cao tối đa cho phép?",
-                    dapAn1 = "Biển 1",
-                    dapAn2 = "Biển 2",
-                    dapAn3 = "Biển 3",
-                    dapAn4 = "",
-                    dapAnDung = "1",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Biển nào dưới đây báo hiệu cấm xe ô tô vượt?",
+                    cauHoi = "Biển nào dưới đây xe gắn máy được phép đi vào?",
                     dapAn1 = "Biển 1",
                     dapAn2 = "Biển 2",
                     dapAn3 = "Cả hai biển",
@@ -1345,7 +1038,7 @@ class MyDbHelper(context: Context) :
                     chuDe = "Biển báo đường bộ"
                 ),
                 LyThuyet(
-                    cauHoi = "Biển nào báo hiệu cấm xe ô tô và xe mô tô đi vào?",
+                    cauHoi = "Biển nào báo hiệu cấm xe mô tô hai bánh đi vào?",
                     dapAn1 = "Biển 1",
                     dapAn2 = "Biển 2",
                     dapAn3 = "Biển 3",
@@ -1354,7 +1047,178 @@ class MyDbHelper(context: Context) :
                     chuDe = "Biển báo đường bộ"
                 ),
                 LyThuyet(
-                    cauHoi = "Biển nào sau đây báo hiệu giới hạn trọng lượng toàn bộ xe?",
+                    cauHoi = "Khi gặp biển nào thì xe mô tô hai bánh được đi vào?",
+                    dapAn1 = "Không biển nào",
+                    dapAn2 = "Biển 1 và 2",
+                    dapAn3 = "Biển 2 và 3",
+                    dapAn4 = "Cả ba biển",
+                    dapAnDung = "3",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào cấm quay xe?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Không biển nào",
+                    dapAn4 = "Cả 2 biển",
+                    dapAnDung = "2",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào cấm xe rẽ trái?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Cả hai biển",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Khi gặp biển nào xe được rẽ trái?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Không biển nào",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào cấm các phương tiện giao thông đường bộ rẽ phải?",
+                    dapAn1 = "Biển 1 và 2",
+                    dapAn2 = "Biển 1 và 3",
+                    dapAn3 = "Biển 2 và 3",
+                    dapAn4 = "Cả ba biển",
+                    dapAnDung = "1",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào cấm các phương tiện giao thông đường bộ rẽ trái?",
+                    dapAn1 = "Biển 1 và 2",
+                    dapAn2 = "Biển 1 và 3",
+                    dapAn3 = "Biển 2 và 3",
+                    dapAn4 = "Cả ba biển",
+                    dapAnDung = "1",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào cho phép xe rẽ trái?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Không biển nào",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào xe quay đầu không bị cấm?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Cả 2 biển",
+                    dapAn4 = "",
+                    dapAnDung = "3",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào xe được phép quay đầu nhưng không được rẽ trái?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Cả 2 biển",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào là biển cấm đi ngược chiều?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Cả ba biển",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào dưới đây các phương tiện không được phép đi vào?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Biển 1 và 2",
+                    dapAn4 = "",
+                    dapAnDung = "3",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Khi gặp biển nào xe ưu tiên theo luật định vẫn phải dừng?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Cả ba biển",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào cấm tất cả các loại xe cơ giới và thô sơ đi lại trên đường, trừ xe ưu tiên theo luật định?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Cả hai biển",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển báo này có ý nghĩa như thế nào?",
+                    dapAn1 = "Tốc độ tối đa cho phép về ban đêm cho các phương tiện là 70 km/h",
+                    dapAn2 = "Tốc độ tối thiểu cho phép về ban đêm cho các phương tiện là 70 km/h",
+                    dapAn4 = "",
+                    dapAn3 = "",
+                    dapAnDung = "1",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển này có hiệu lực đối với xe mô tô hai, ba bánh không?",
+                    dapAn1 = "Có",
+                    dapAn2 = "Không",
+                    dapAn3 = "",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển này có ý nghĩa gì?",
+                    dapAn1 = "Cấm xe cơ giới đi thẳng",
+                    dapAn2 = "Cấm xe ô tô và mô tô đi về bên trái và bên phải",
+                    dapAn3 = "Hướng trái và phải không cấm xe cơ giới",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển phụ đặt dưới biển cấm bóp còi có ý nghĩa gì?",
+                    dapAn1 = "Báo khoảng cách đến nơi cấm bóp còi",
+                    dapAn2 = "Chiều dài đoạn đường cấm bóp còi từ nơi đặt biển",
+                    dapAn3 = "Báo cấm dùng còi có độ vang xa 500m",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Chiều dài đoạn đường dài 500m từ nơi đặt biển này, người lái xe có được phép bấm còi không?",
+                    dapAn1 = "Được phép",
+                    dapAn2 = "Không được phép",
+                    dapAn3 = "",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào xe mô tô hai bánh được đi vào?",
+                    dapAn1 = "Biển 1 và 2",
+                    dapAn2 = "Biển 1 và 3",
+                    dapAn3 = "Biển 2 và 3",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào xe mô tô hai bánh không được đi vào?",
                     dapAn1 = "Biển 1",
                     dapAn2 = "Biển 2",
                     dapAn3 = "Biển 3",
@@ -1363,52 +1227,106 @@ class MyDbHelper(context: Context) :
                     chuDe = "Biển báo đường bộ"
                 ),
                 LyThuyet(
-                    cauHoi = "Biển nào dưới đây báo hiệu hạn chế tốc độ tối đa cho phép?",
-                    dapAn1 = "Biển 1",
-                    dapAn2 = "Biển 2",
-                    dapAn3 = "Biển 3",
+                    cauHoi = "Ba biển này có hiệu lực như thế nào?",
+                    dapAn1 = "Cấm các loại xe ở biển phụ đi vào",
+                    dapAn2 = "Cấm các loại xe cơ giới đi vào trừ loại xe ở biển phụ",
+                    dapAn3 = "",
                     dapAn4 = "",
                     dapAnDung = "1",
                     chuDe = "Biển báo đường bộ"
                 ),
                 LyThuyet(
-                    cauHoi = "Biển nào dưới đây báo hiệu cấm xe mô tô và xe gắn máy đi vào?",
-                    dapAn1 = "Biển 1",
-                    dapAn2 = "Biển 2",
-                    dapAn3 = "Biển 3",
-                    dapAn4 = "",
-                    dapAnDung = "1",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Biển nào báo hiệu đường cấm xe máy chuyên dùng?",
-                    dapAn1 = "Biển 1",
-                    dapAn2 = "Biển 2",
-                    dapAn3 = "Biển 3",
-                    dapAn4 = "",
-                    dapAnDung = "3",
-                    chuDe = "Biển báo đường bộ"
-                ),
-                LyThuyet(
-                    cauHoi = "Biển nào báo hiệu cấm ô tô con đi vào?",
-                    dapAn1 = "Biển 1",
-                    dapAn2 = "Biển 2",
-                    dapAn3 = "Biển 3",
+                    cauHoi = "Biển này có ý nghĩa gì?",
+                    dapAn1 = "Cấm dừng xe về hướng bên trái",
+                    dapAn2 = "Cấm đỗ xe và cấm dừng xe theo hướng bên phải",
+                    dapAn3 = "Được phép đỗ xe và dừng xe theo hướng bên phải",
                     dapAn4 = "",
                     dapAnDung = "2",
                     chuDe = "Biển báo đường bộ"
                 ),
                 LyThuyet(
-                    cauHoi = "Biển nào báo hiệu cấm xe chở hàng nguy hiểm đi vào?",
+                    cauHoi = "Biển nào là biển tốc độ tối đa cho phép về ban đêm?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Cả 2 biển",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào báo hiệu hạn chế tốc độ của phương tiện không vượt quá trị số ghi trên biển?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Số 50 trên biển báo dưới đây có ý nghĩa gì?",
+                    dapAn1 = "Tốc độ tối đa các xe cơ giới được phép chạy",
+                    dapAn2 = "Tốc độ tối thiểu các xe cơ giới được phép chạy",
+                    dapAn3 = "",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển báo này có ý nghĩa gì?",
+                    dapAn1 = "Báo hiệu tốc độ tối đa cho phép các xe cơ giới chạy",
+                    dapAn2 = "Báo hiệu tốc độ tối thiểu cho phép các xe cơ giới chạy",
+                    dapAn3 = "",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Gặp biển nào người lái xe phải nhường đường cho người đi bộ?",
                     dapAn1 = "Biển 1",
                     dapAn2 = "Biển 2",
                     dapAn3 = "Biển 3",
-                    dapAn4 = "",
+                    dapAn4 = "Biển 1 và 3",
+                    dapAnDung = "1",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào chỉ đường dành cho người đi bộ, các loại xe không được đi vào khi gặp biển này?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 1 và 3",
+                    dapAn3 = "Biển 3",
+                    dapAn4 = "Cả ba biển",
                     dapAnDung = "3",
                     chuDe = "Biển báo đường bộ"
                 ),
                 LyThuyet(
-                    cauHoi = "Các biển nào dưới đây cấm ô tô khách đi vào?",
+                    cauHoi = "Biển nào báo hiệu ‘đường dành cho xe thô sơ’?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Biển 3",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào báo hiệu sắp đến chỗ giao nhau nguy hiểm?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 1 và 2",
+                    dapAn3 = "Biển 2 và 3",
+                    dapAn4 = "Cả ba biển",
+                    dapAnDung = "4",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào báo hiệu ‘giao nhau với đường sắt có rào chắn’?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2 và 3",
+                    dapAn3 = "Biển 3",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào báo hiệu ‘giao nhau có tín hiệu đèn’?",
                     dapAn1 = "Biển 1",
                     dapAn2 = "Biển 2",
                     dapAn3 = "Biển 3",
@@ -1417,49 +1335,498 @@ class MyDbHelper(context: Context) :
                     chuDe = "Biển báo đường bộ"
                 ),
                 LyThuyet(
-                    cauHoi = "Biển báo nào dưới đây thuộc nhóm biển báo chỉ dẫn?",
-                    dapAn1 = "Biển báo màu xanh dương hình chữ nhật hoặc hình vuông.",
-                    dapAn2 = "Biển báo hình tam giác viền đỏ.",
-                    dapAn3 = "Biển báo hình tròn viền đỏ.",
+                    cauHoi = "Biển nào báo hiệu nguy hiểm giao nhau với đường sắt?",
+                    dapAn1 = "Biển 1 và 2",
+                    dapAn2 = "Biển 1 và 3",
+                    dapAn3 = "Biển 2 và 3",
+                    dapAn4 = "Cả ba biển",
+                    dapAnDung = "2",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào báo hiệu đường bộ giao nhau với đường sắt không có rào chắn?",
+                    dapAn1 = "Biển 1 và 2",
+                    dapAn2 = "Biển 1 và 3",
+                    dapAn3 = "Biển 2 và 3",
+                    dapAn4 = "Cả ba biển",
+                    dapAnDung = "3",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào báo hiệu sắp đến chỗ giao nhau giữa đường bộ và đường sắt?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Biển 3",
+                    dapAn4 = "Biển 1 và 3",
+                    dapAnDung = "1",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào báo hiệu ‘cửa chui’?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Biển 3",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Hai biển này có ý nghĩa gì?",
+                    dapAn1 = "Nơi đường sắt giao vuông góc với đường bộ không có rào chắn",
+                    dapAn2 = "Báo trước sắp đến vị trí giao cắt đường bộ với đường sắt cùng mức, không vuông góc và không có rào chắn",
+                    dapAn3 = "Nơi đường sắt giao nhau với đường bộ",
                     dapAn4 = "",
                     dapAnDung = "1",
                     chuDe = "Biển báo đường bộ"
                 ),
                 LyThuyet(
-                    cauHoi = "Biển báo hình tròn viền đỏ thường mang ý nghĩa gì?",
-                    dapAn1 = "Chỉ dẫn.",
-                    dapAn2 = "Nguy hiểm.",
-                    dapAn3 = "Cấm hoặc hạn chế.",
+                    cauHoi = "Biển nào báo hiệu hết đoạn đường ưu tiên?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Biển 3",
                     dapAn4 = "",
                     dapAnDung = "3",
                     chuDe = "Biển báo đường bộ"
                 ),
                 LyThuyet(
-                    cauHoi = "Biển báo hình tam giác viền đỏ, nền vàng là loại biển gì?",
-                    dapAn1 = "Biển hiệu lệnh.",
-                    dapAn2 = "Biển chỉ dẫn.",
-                    dapAn3 = "Biển cảnh báo nguy hiểm.",
-                    dapAn4 = "",
+                    cauHoi = "Biển nào báo hiệu, chỉ dẫn xe đi trên đường này được quyền ưu tiên qua nơi giao nhau?",
+                    dapAn1 = "Biển 1 và 2",
+                    dapAn2 = "Biển 1 và 3",
+                    dapAn3 = "Biển 2 và 3",
+                    dapAn4 = "Cả ba biển",
+                    dapAnDung = "2",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào báo hiệu giao nhau với đường không ưu tiên?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Biển 3",
+                    dapAn4 = "Biển 2 và 3",
+                    dapAnDung = "1",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào báo hiệu giao nhau với đường ưu tiên?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Biển 3",
+                    dapAn4 = "Cả ba biển",
                     dapAnDung = "3",
                     chuDe = "Biển báo đường bộ"
                 ),
                 LyThuyet(
-                    cauHoi = "Biển báo nào yêu cầu người lái xe phải tuân thủ đúng theo hướng chỉ dẫn trên biển?",
-                    dapAn1 = "Biển cấm.",
-                    dapAn2 = "Biển chỉ dẫn.",
-                    dapAn3 = "Biển hiệu lệnh.",
+                    cauHoi = "Biển nào báo hiệu đường giao nhau của các tuyến đường cùng cấp?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Biển 3",
                     dapAn4 = "",
-                    dapAnDung = "3",
+                    dapAnDung = "1",
                     chuDe = "Biển báo đường bộ"
                 ),
                 LyThuyet(
-                    cauHoi = "Biển báo hiệu lệnh thường có dạng hình gì?",
-                    dapAn1 = "Hình tam giác viền đỏ.",
-                    dapAn2 = "Hình tròn màu xanh lam.",
-                    dapAn3 = "Hình vuông hoặc hình chữ nhật nền xanh.",
+                    cauHoi = "Biển nào báo hiệu đường hai chiều?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Biển 3",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào báo hiệu phải giảm tốc độ, nhường đường cho xe cơ giới đi ngược chiều qua đường hẹp?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Biển 3",
                     dapAn4 = "",
                     dapAnDung = "2",
                     chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào chỉ dẫn được ưu tiên qua đường hẹp?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Biển 3",
+                    dapAn4 = "Biển 2 và 3",
+                    dapAnDung = "3",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào báo hiệu đường đôi?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Biển 3",
+                    dapAn4 = "",
+                    dapAnDung = "3",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào báo hiệu kết thúc đường đôi?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Biển 3",
+                    dapAn4 = "",
+                    dapAnDung = "3",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào báo hiệu giao nhau với đường hai chiều?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Biển 3",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào báo hiệu giao nhau với đường hai chiều?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Biển 3",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào báo hiệu chú ý chướng ngại vật?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2 và 3",
+                    dapAn3 = "Cả ba biển",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào báo hiệu đường hầm?",
+                    dapAn1 = "Cả ba biển",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Biển 2 và 3",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào dưới đây là biển cầu hẹp?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Biển 3",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Gặp biển nào người tham gia giao thông phải đi chậm và thận trọng để phòng khả năng xuất hiện và di chuyển bất ngờ của trẻ em trên mặt đường?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào chỉ dẫn nơi bắt đầu đoạn đường dành cho người đi bộ?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Biển 3",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào báo hiệu gần đến đoạn đường thường có trẻ em đi ngang qua?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Biển 3",
+                    dapAn4 = "Cả ba biển",
+                    dapAnDung = "2",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào sau đây là biển dốc xuống nguy hiểm?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển báo này có ý nghĩa gì?",
+                    dapAn1 = "Báo hiệu đường có ổ gà, lồi lõm",
+                    dapAn2 = "Báo hiệu đường có gờ giảm tốc phía trước",
+                    dapAn3 = "",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Các biển báo này có ý nghĩa gì?",
+                    dapAn1 = "Để báo trước gần tới đoạn đường có hiện tượng đất đã từ trên ta luy dương sạt lở bất ngờ gây nguy hiểm cho xe cộ và người đi đường.",
+                    dapAn2 = "Để báo trước nơi có kết cấu mặt đường rời rạc, khi phương tiện đi qua, làm cho các viên đá, sỏi văng lên gây nguy hiểm và mất an toàn cho người và phương tiện tham gia giao thông.",
+                    dapAn3 = "Để cảnh báo những đoạn nền đường yếu, đoạn đường đang theo dõi lún mà việc vận hành xe ở tốc độ cao có thể gây nguy hiểm.",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào báo hiệu các phương tiện phải tuân thủ tốc độ tối đa cho phép trên từng làn đường?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Cả hai biển",
+                    dapAn4 = "",
+                    dapAnDung = "3",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Khi gặp biển nào thì các phương tiện không được đi vào, trừ ô tô và mô tô?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển này có ý nghĩa gì?",
+                    dapAn1 = "Chỉ hướng đi phải theo",
+                    dapAn2 = "Biển báo hiệu cho người lái xe biết số lượng làn đường trên mặt đường và hướng đi trên mỗi làn đường phải theo",
+                    dapAn3 = "Chỉ hướng đường phải theo",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào (đặt trước ngã ba, ngã tư) cho phép xe được rẽ sang hướng khác?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Không biển nào",
+                    dapAn4 = "",
+                    dapAnDung = "3",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào báo hiệu “hướng đi thẳng phải theo”?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào báo hiệu “đường một chiều”?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Cả hai biển",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Trong các biển dưới đây biển nào là biển “hết tốc độ tối đa cho phép”?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Biển 3",
+                    dapAn4 = "Cả ba biển",
+                    dapAnDung = "1",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Trong các biển dưới đây biển nào là biển “hết tốc độ tối thiểu”?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Biển 3",
+                    dapAn4 = "Cả ba biển",
+                    dapAnDung = "3",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào dưới đây báo hiệu hết cấm vượt?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Biển 3",
+                    dapAn4 = "Biển 2 và 3",
+                    dapAnDung = "4",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Trong các biển dưới đây biển nào là biển “hết mọi lệnh cấm”?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Biển 3",
+                    dapAn4 = "Cả ba biển",
+                    dapAnDung = "2",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào cho phép được quay đầu xe đi theo hướng ngược lại khi đặt biển trước ngã ba, ngã tư?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Biển 3",
+                    dapAn4 = "Không biển nào",
+                    dapAnDung = "3",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào không cho phép rẽ phải?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Biển 3",
+                    dapAn4 = "Biển 1 và 3",
+                    dapAnDung = "1",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Khi đến chỗ giao nhau, gặp biển nào thì người lái xe không được cho xe đi thẳng, phải rẽ sang hướng khác?",
+                    dapAn1 = "Biển 1 và 2",
+                    dapAn2 = "Biển 1 và 3",
+                    dapAn3 = "Biển 2 và 3",
+                    dapAn4 = "Cả ba biển",
+                    dapAnDung = "1",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển 1 có ý nghĩa gì?",
+                    dapAn1 = "Biển chỉ dẫn hết cấm đỗ xe theo giờ trong khu vực.",
+                    dapAn2 = "Biển chỉ dẫn hết hiệu lực đỗ xe trên các tuyến đường đối ngoại.",
+                    dapAn3 = "Biển chỉ dẫn khu vực đỗ xe trên các tuyến đường đối ngoại.",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào chỉ dẫn cho người đi bộ sử dụng cầu vượt qua đường?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Cả hai biển",
+                    dapAn4 = "Không biển nào",
+                    dapAnDung = "1",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào chỉ dẫn cho người đi bộ sử dụng hầm chui qua đường?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Cả hai biển",
+                    dapAn4 = "Không biển nào",
+                    dapAnDung = "2",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào báo hiệu nơi đỗ xe cho người tàn tật?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "Biển 3",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Gặp biển báo này, người tham gia giao thông phải xử lý như thế nào?",
+                    dapAn1 = "Dừng xe tại khu vực có trạm cảnh sát giao thông",
+                    dapAn2 = "Tiếp tục lưu thông với tốc độ bình thường",
+                    dapAn3 = "Phải giảm tốc độ đến mức độ an toàn và không được vượt khi đi qua khu vực này.",
+                    dapAn4 = "",
+                    dapAnDung = "3",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Gặp biển báo này người lái xe có bắt buộc phải chạy vòng theo đảo an toàn theo hướng mũi tên khi muốn chuyển hướng hay không?",
+                    dapAn1 = "Bắt buộc",
+                    dapAn2 = "Không bắt buộc",
+                    dapAn3 = "",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = "Biển báo đường bộ"
+                ),
+                LyThuyet(
+                    cauHoi = "Biển nào báo hiệu “cầu vượt liên thông”?",
+                    dapAn1 = "Biển 2 và 3",
+                    dapAn2 = "Biển 1 và 2",
+                    dapAn3 = "Biển 1 và 3",
+                    dapAn4 = "Cả ba biển",
+                    dapAnDung = "3",
+                    chuDe = "Biển báo đường bộ"
+                ),
+
+                LyThuyet(
+                    cauHoi = "Biển số 1 có ý nghĩa gì?",
+                    dapAn1 = "Đi thẳng hoặc rẽ trái trên cầu vượt",
+                    dapAn2 = "Đi thẳng hoặc rẽ phải trên cầu vượt",
+                    dapAn3 = "Báo hiệu cầu vượt liên thông",
+                    dapAn4 = "",
+                    dapAnDung = "3",
+                    chuDe = "Biển báo đường bộ"
+                ),
+
+                LyThuyet(
+                    cauHoi = "Biển nào báo hiệu “tuyến đường cầu vượt cắt qua”?",
+                    dapAn1 = "Biển 1 và 2",
+                    dapAn2 = "Biển 1 và 3",
+                    dapAn3 = "Biển 2 và 3",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = "Biển báo đường bộ"
+                ),
+
+                LyThuyet(
+                    cauHoi = "Biển báo dưới đây có ý nghĩa gì?",
+                    dapAn1 = "Chỉ dẫn khoảng cách đến làn đường cứu nạn (làn thoát xe khẩn cấp)",
+                    dapAn2 = "Báo hiệu đường cụt phía trước",
+                    dapAn3 = "Báo hiệu nút giao gần nhất phía trước",
+                    dapAn4 = "Báo hiệu trạm dừng nghỉ phía trước",
+                    dapAnDung = "1",
+                    chuDe = "Biển báo đường bộ"
+                ),
+
+                LyThuyet(
+                    cauHoi = "Tại đoạn đường có biển “làn đường dành riêng cho từng loại xe” các phương tiện có được phép chuyển sang làn khác khi đến gần nơi đường bộ giao nhau hay không?",
+                    dapAn1 = "Được phép chuyển sang làn khác",
+                    dapAn2 = "Không được phép chuyển sang làn khác, chỉ được đi trong làn quy định theo biển",
+                    dapAn3 = "",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    chuDe = "Biển báo đường bộ"
+                ),
+
+                LyThuyet(
+                    cauHoi = "Biển nào chỉ dẫn người lái xe đi được cả hai hướng?",
+                    dapAn1 = "Biển 1",
+                    dapAn2 = "Biển 2",
+                    dapAn3 = "",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    chuDe = "Biển báo đường bộ"
+                ),
+
+                LyThuyet(
+                    cauHoi = "Biển này có ý nghĩa như thế nào?",
+                    dapAn1 = "Chỉ dẫn chướng ngại vật phía trước",
+                    dapAn2 = "Chỉ dẫn hướng rẽ để nhắc người điều khiển phương tiện chuẩn bị đổi hướng đi khi sắp vào đường cong nguy hiểm",
+                    dapAn3 = "",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    chuDe = "Biển báo đường bộ"
+                ),
+
+                LyThuyet(
+                    cauHoi = "Vạch mũi tên chỉ hướng trên mặt đường nào dưới đây cho phép xe chỉ được đi thẳng và rẽ phải?",
+                    dapAn1 = "Vạch 1",
+                    dapAn2 = "Vạch 2 và 3",
+                    dapAn3 = "Vạch 3",
+                    dapAn4 = "Vạch 1 và 2",
+                    dapAnDung = "3",
+                    chuDe = "Vạch kẻ đường"
+                ),
+
+                LyThuyet(
+                    cauHoi = "Vạch kẻ đường nào dưới đây là vạch phân chia hai chiều xe chạy, xe không được lấn làn, không được đè lên vạch?",
+                    dapAn1 = "Vạch 1",
+                    dapAn2 = "Vạch 2",
+                    dapAn3 = "Vạch 3",
+                    dapAn4 = "Cả 3 vạch",
+                    dapAnDung = "2",
+                    chuDe = "Vạch kẻ đường"
                 ),
                 LyThuyet(
                     cauHoi = "Những hành vi nào sau đây thể hiện là người có văn hóa giao thông?",
