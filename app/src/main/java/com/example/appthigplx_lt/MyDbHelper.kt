@@ -465,6 +465,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Người tham gia giao thông ở phía trước và phía sau người điều khiển được đi tất cả các hướng; người tham gia giao thông ở phía bên phải và phía bên trái người điều khiển phải dừng lại.",
                     dapAn4 = "Người tham gia giao thông ở phía trước và phía sau người điều khiển phải dừng lại; người tham gia giao thông ở phía bên phải và phía bên trái người điều khiển được đi tất cả các hướng.",
                     dapAnDung = "4",
+                    hinhAnh = R.drawable.knqt1,
                     chuDe = "Khái niệm và Quy tắc"
                 ),
 
@@ -475,6 +476,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Người tham gia giao thông ở các hướng đều phải dừng lại trừ các xe ở trong khu vực giao nhau.",
                     dapAn4 = "Người ở hướng đối diện cảnh sát giao thông phải dừng lại, các hướng khác được đi trong đó có bạn.",
                     dapAnDung = "3",
+                    hinhAnh = R.drawable.knqt2,
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
