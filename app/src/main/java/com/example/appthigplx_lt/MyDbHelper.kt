@@ -2714,30 +2714,6 @@ class MyDbHelper(context: Context) :
         db.close()
     }
 
-    fun getAllLyThuyet(): List<LyThuyet> {
-        val list = mutableListOf<LyThuyet>()
-        val db = readableDatabase
-        val cursor = db.rawQuery("SELECT * FROM LyThuyet", null)
-        if (cursor.moveToFirst()) {
-            do {
-                list.add(
-                    LyThuyet(
-                        cauHoi = cursor.getString(0),
-                        dapAn1 = cursor.getString(1),
-                        dapAn2 = cursor.getString(2),
-                        dapAn3 = cursor.getString(3),
-                        dapAn4 = cursor.getString(4),
-                        dapAnDung = cursor.getString(5),
-                        chuDe = cursor.getString(6)
-                    )
-                )
-            } while (cursor.moveToNext())
-        }
-        cursor.close()
-        db.close()
-        return list
-    }
-
     fun getLyThuyetTheoChuDe(chuDe: String): List<LyThuyet> {
         val list = mutableListOf<LyThuyet>()
         val db = readableDatabase
@@ -2772,29 +2748,552 @@ class MyDbHelper(context: Context) :
         if (cursor.count == 0) {
             val list = listOf(
                 BienBao(
-                    "101",
+                    "P.101",
+                    "Đường cấm",
+                    "Biển báo đường cấm tất cả các loại phương tiện tham gia giao thông đi lại cả hai hướng, trừ xe ưu tiên theo luật định.",
+                    R.drawable.p101
+                ),
+                BienBao(
+                    "P.102",
                     "Cấm đi ngược chiều",
-                    "Biển báo cấm xe đi vào chiều ngược lại.",
-                    R.drawable.cam_nguoc_chieu
+                    "Biển báo đường cấm tất cả các loại phương tiện tham gia giao thông đi vào theo chiều đặt biển.",
+                    R.drawable.p102
                 ),
                 BienBao(
-                    "102",
-                    "Cấm rẽ trái",
-                    "Biển báo cấm các phương tiện rẽ trái.",
-                    R.drawable.cam_re_trai
+                    "P.103a",
+                    "Cấm ô tô",
+                    "Biển báo đường cấm tất cả các loại xe cơ giới kể cả mô tô 3 bánh có thùng đi qua, trừ xe mô tô 2 bánh, xe gắn máy (kể cả xe máy điện) và các xe được ưu tiên theo Luật Giao thông đường bộ.",
+                    R.drawable.p103a
                 ),
                 BienBao(
-                    "103",
-                    "Cấm quay đầu xe",
-                    "Biển báo cấm quay đầu xe tại vị trí này.",
-                    R.drawable.cam_quay_dau
+                    "P.103b",
+                    "Cấm ô tô rẽ phải",
+                    "Biển báo đường cấm xe ô tô rẽ phải (kể cả xe mô tô ba bánh), trừ các xe được ưu tiên theo Luật Giao thông đường bộ.",
+                    R.drawable.p103b
                 ),
                 BienBao(
-                    "104",
-                    "Cấm vượt",
-                    "Biển báo cấm vượt các phương tiện khác.",
-                    R.drawable.cam_vuot
+                    "P.103c",
+                    "Cấm ô tô rẽ trái",
+                    "Biển báo đường cấm xe ô tô rẽ trái và cũng không được phép quay đầu xe, trừ các xe được ưu tiên theo Luật Giao thông đường bộ.",
+                    R.drawable.p103c
+                ),
+                BienBao(
+                    "P.104",
+                    "Cấm mô tô",
+                    "Biển báo đường cấm tất cả các loại mô tô đi qua, trừ các loại xe mô tô được ưu tiên theo Luật Giao thông đường bộ.",
+                    R.drawable.p104
+                ),
+                BienBao(
+                    "P.105",
+                    "Cấm ô tô và mô tô",
+                    "Biển báo đường cấm tất cả xe cơ giới và xe mô tô đi qua trừ xe gắn máy và xe được ưu tiên theo Luật Giao thông đường bộ.",
+                    R.drawable.p105
+                ),
+                BienBao(
+                    "P.106a",
+                    "Cấm ô tô tải",
+                    "Biển báo đường cấm tất cả các loại xe ô tô tải trừ các xe được ưu tiên theo Luật Giao thông đường bộ, hiệu lực cấm đối với cả máy kéo và xe máy chuyên dùng.",
+                    R.drawable.p106a
+                ),
+                BienBao(
+                    "P.106b",
+                    "Cấm ô tô tải theo trọng lượng",
+                    "Trọng lượng được tính theo tấn ghi trên biển.",
+                    R.drawable.p106b
+                ),
+                BienBao(
+                    "P.106c",
+                    "Cấm ô tô tải chở hàng nguy hiểm",
+                    "Biển báo P.106c đường cấm tất cả các loại xe ô tô tải chở hàng nguy hiểm.",
+                    R.drawable.p106c
+                ),
+                BienBao(
+                    "P.107",
+                    "Cấm ô tô khách và ô tô tải",
+                    "Biển báo đường cấm xe ô tô khách và các loại xe ô tô tải, kể cả máy kéo và xe máy chuyên dùng đi qua, trừ các xe được ưu tiên theo Luật Giao thông đường bộ.",
+                    R.drawable.p107
+                ),
+                BienBao(
+                    "P.107a",
+                    "Cấm ô tô khách",
+                    "Biển báo đường cấm ô tô chở khách đi qua trừ các xe ưu tiên theo quy định. Biển này không cấm xe buýt.",
+                    R.drawable.p107a
+                ),
+                BienBao(
+                    "P.107b",
+                    "Cấm xe taxi",
+                    "Biển báo đường cấm ô tô taxi đi lại. Trường hợp cấm xe ô tô taxi theo giờ thì đặt biển phụ ghi giờ cấm.",
+                    R.drawable.p107b
+                ),
+                BienBao(
+                    "P.108",
+                    "Cấm ô tô kéo rơ moóc",
+                    "Biển báo đường cấm tất cả các loại xe cơ giới kéo theo rơ moóc kể cả xe mô tô, máy kéo, xe ô tô khách kéo theo rơ moóc đi qua, trừ loại xe ô tô sơ mi rơ moóc và các xe được ưu tiên theo Luật Giao thông đường bộ (có kéo theo rơ moóc).",
+                    R.drawable.p108
+                ),
+                BienBao(
+                    "P.108a",
+                    "Cấm xe sơ-mi rơ-moóc",
+                    "Biển báo đường cấm các loại xe sơ-mi-rơ-moóc và các xe kéo rơ-moóc trừ các xe được ưu tiên (có dạng xe sơ-mi-rơ-moóc hoặc có kéo theo rơ-moóc) theo quy định.",
+                    R.drawable.p108a
+                ),
+                BienBao(
+                    "P.109",
+                    "Cấm máy kéo",
+                    "Biển báo đường cấm tất cả các loại máy kéo, kể cả máy kéo bánh hơi và bánh xích đi qua.",
+                    R.drawable.p109
+                ),
+                BienBao(
+                    "P.110a",
+                    "Cấm xe đạp",
+                    "Biển báo đường cấm xe đạp đi qua. Biển không có giá trị cấm những người dắt xe đạp.",
+                    R.drawable.p110a
+                ),
+                BienBao(
+                    "P.110b",
+                    "Cấm xe đạp thồ",
+                    "Biển báo đường cấm xe đạp thồ đi qua. Biển không có giá trị cấm người dắt loại xe này.",
+                    R.drawable.p110b
+                ),
+                BienBao(
+                    "P.111a",
+                    "Cấm xe gắn máy",
+                    "Biển báo đường cấm xe gắn máy đi qua. Biển không có giá trị cấm đối với xe đạp.",
+                    R.drawable.p111a
+                ),
+                BienBao(
+                    "P.112",
+                    "Cấm người đi bộ",
+                    "Biển báo đường cấm người đi bộ qua lại.",
+                    R.drawable.p112
+                ),
+                BienBao(
+                    "W.201a",
+                    "Chỗ ngoặt nguy hiểm bên trái",
+                    "Biển báo đường sắp đến chỗ ngoặt nguy hiểm.",
+                    R.drawable.w201a
+                ),
+                BienBao(
+                    "W.201b",
+                    "Chỗ ngoặt nguy hiểm bên phải",
+                    "Biển báo đường sắp đến chỗ ngoặt nguy hiểm.",
+                    R.drawable.w201b
+                ),
+                BienBao(
+                    "W.201c",
+                    "Chỗ ngoặt nguy hiểm có nguy cơ lật bên phải",
+                    "Biển số W.201c báo hiệu chỗ ngoặt nguy hiểm có nguy cơ lật xe bên phải khi đường cong vòng sang trái.",
+                    R.drawable.w201c
+                ),
+                BienBao(
+                    "W.201d",
+                    "Chỗ ngoặt nguy hiểm có nguy cơ lật bên trái",
+                    "Biển số W.201d báo hiệu chỗ ngoặt nguy hiểm có nguy cơ lật xe bên trái khi đường cong vòng bên phải.",
+                    R.drawable.w201d
+                ),
+                BienBao(
+                    "W.202a",
+                    "Nhiều chỗ ngoặt nguy hiểm liên tiếp",
+                    "Biển báo sắp đến đoạn đường ngoặt liên tiếp (có từ 3 đoạn cong ngược chiều nhau) rất nguy hiểm, người lái xe cần giảm tốc độ.",
+                    R.drawable.w202a
+                ),
+                BienBao(
+                    "W.202b",
+                    "Nhiều chỗ ngoặt nguy hiểm liên tiếp",
+                    "Biển báo sắp đến đoạn đường ngoặt liên tiếp (có từ 3 đoạn cong ngược chiều nhau) rất nguy hiểm, người lái xe cần giảm tốc độ.",
+                    R.drawable.w202b
+                ),
+                BienBao(
+                    "W.203a",
+                    "Đường bị hẹp cả hai bên",
+                    "Biển báo sắp đến chỗ một đoạn đường bị hẹp đột ngột.",
+                    R.drawable.w203a
+                ),
+                BienBao(
+                    "W.203b",
+                    "Đường bị hẹp bên trái",
+                    "Biển báo sắp đến chỗ một đoạn đường bị hẹp đột ngột.",
+                    R.drawable.w203b
+                ),
+                BienBao(
+                    "W.203c",
+                    "Đường bị hẹp bên phải",
+                    "Biển báo sắp đến chỗ một đoạn đường bị hẹp đột ngột.",
+                    R.drawable.w203c
+                ),
+                BienBao(
+                    "W.204",
+                    "Đường hai chiều",
+                    "Biển báo hiệu sắp đến đoạn đường chỉ có một làn đường mà tạm thời hay thường xuyên các chiều xe đi và về vẫn phải dùng chung. Khi qua đoạn đường này, lái xe cần thận trọng với xe phía chiều ngược lại.",
+                    R.drawable.w204
+                ),
+                BienBao(
+                    "W.205a",
+                    "Nơi giao nhau của đường đồng cấp",
+                    "Biển báo hiệu sắp đến nơi giao nhau của các tuyến đường cùng cấp (không có đường nào ưu tiên) trên cùng một mặt bằng.",
+                    R.drawable.w205a
+                ),
+                BienBao(
+                    "W.205b",
+                    "Nơi giao nhau của đường đồng cấp",
+                    "Biển báo hiệu sắp đến nơi giao nhau của các tuyến đường cùng cấp (không có đường nào ưu tiên) trên cùng một mặt bằng.",
+                    R.drawable.w205b
+                ),
+                BienBao(
+                    "W.205c",
+                    "Nơi giao nhau của đường đồng cấp",
+                    "Biển báo hiệu sắp đến nơi giao nhau của các tuyến đường cùng cấp (không có đường nào ưu tiên) trên cùng một mặt bằng.",
+                    R.drawable.w205c
+                ),
+                BienBao(
+                    "W.205d",
+                    "Nơi giao nhau của đường đồng cấp",
+                    "Biển báo hiệu sắp đến nơi giao nhau của các tuyến đường cùng cấp (không có đường nào ưu tiên) trên cùng một mặt bằng.",
+                    R.drawable.w205d
+                ),
+                BienBao(
+                    "W.205e",
+                    "Nơi giao nhau của đường đồng cấp",
+                    "Biển báo hiệu sắp đến nơi giao nhau của các tuyến đường cùng cấp (không có đường nào ưu tiên) trên cùng một mặt bằng.",
+                    R.drawable.w205e
+                ),
+                BienBao(
+                    "W.206",
+                    "Giao nhau chạy theo vòng xuyến",
+                    "Biển báo hiệu nơi giao nhau có bố trí đảo an toàn ở giữa điểm giao, các loại xe qua điểm giao vòng trái phải đi vòng xuyến qua đảo an toàn.",
+                    R.drawable.w206
+                ),
+                BienBao(
+                    "W.207a",
+                    "Giao nhau với đường không ưu tiên",
+                    "Biển báo hiệu đường ưu tiên sắp đến nơi giao nhau với đường không ưu tiên.",
+                    R.drawable.w207a
+                ),
+                BienBao(
+                    "W.207b",
+                    "Giao nhau với đường không ưu tiên",
+                    "Biển báo hiệu đường ưu tiên sắp đến nơi giao nhau với đường không ưu tiên.",
+                    R.drawable.w207b
+                ),
+                BienBao(
+                    "W.207c",
+                    "Giao nhau với đường không ưu tiên",
+                    "Biển báo hiệu đường ưu tiên sắp đến nơi giao nhau với đường không ưu tiên.",
+                    R.drawable.w207c
+                ),
+                BienBao(
+                    "W.207d",
+                    "Giao nhau với đường không ưu tiên",
+                    "Biển báo hiệu đường ưu tiên sắp đến nơi giao nhau với đường không ưu tiên.",
+                    R.drawable.w207d
+                ),
+                BienBao(
+                    "R.122",
+                    "Dừng lại",
+                    "Biển báo hiệu buộc các xe cơ giới và thô sơ kể cả xe được ưu tiên theo quy định phải dừng lại. Chỉ được phép đi nếu có người điều khiển giao thông hoặc đèn cờ cho phép đi. Nếu không thì chỉ được phép đi khi trên đường không còn nguy cơ gây mất an toàn giao thông.",
+                    R.drawable.r122
+                ),
+                BienBao(
+                    "R.301a",
+                    "Các xe chỉ được đi thẳng",
+                    "Được đặt trước ngã ba, ngã tư. Các xe chỉ được đi thẳng ở khu vực ngã ba, ngã tư.",
+                    R.drawable.r301a
+                ),
+                BienBao(
+                    "R.301b",
+                    "Các xe chỉ được rẽ phải",
+                    "Được đặt sau ngã ba, ngã tư. Các xe chỉ được rẽ phải ở khu vực trước mặt biển.",
+                    R.drawable.r301b
+                ),
+                BienBao(
+                    "R.301c",
+                    "Các xe chỉ được rẽ trái",
+                    "Được đặt sau ngã ba, ngã tư. Các xe chỉ được rẽ trái ở khu vực trước mặt biển.",
+                    R.drawable.r301c
+                ),
+                BienBao(
+                    "R.301d",
+                    "Các xe chỉ được rẽ phải",
+                    "Được đặt trước ngã ba, ngã tư. Các xe chỉ được rẽ phải ở phạm vi ngã ba, ngã tư đằng sau mặt biển.",
+                    R.drawable.r301d
+                ),
+                BienBao(
+                    "R.301e",
+                    "Các xe chỉ được rẽ trái",
+                    "Được đặt trước ngã ba, ngã tư. Các xe chỉ được rẽ trái ở phạm vi ngã ba, ngã tư đằng sau mặt biển.",
+                    R.drawable.r301e
+                ),
+                BienBao(
+                    "R.301f",
+                    "Các xe chỉ được đi thẳng và rẽ phải",
+                    "Được đặt trước ngã ba, ngã tư. Các xe chỉ được phép đi thẳng hay rẽ phải ở khu vực sau mặt biển.",
+                    R.drawable.r301f
+                ),
+                BienBao(
+                    "R.301g",
+                    "Các xe chỉ được đi thẳng và rẽ trái",
+                    "Được đặt trước ngã ba, ngã tư. Các xe chỉ được phép đi thẳng hay rẽ trái ở khu vực sau mặt biển và được phép quay đầu xe để đi theo hướng ngược lại.",
+                    R.drawable.r301g
+                ),
+                BienBao(
+                    "R.301h",
+                    "Các xe chỉ được rẽ trái và phải",
+                    "Được đặt sau ngã ba, ngã tư. Các xe chỉ được phép rẽ trái, quay đầu hoặc rẽ phải ở khu vực ngã ba, ngã tư trước mặt biển.",
+                    R.drawable.r301h
+                ),
+                BienBao(
+                    "R.302a",
+                    "Hướng đi vòng chướng ngại vật bên phải",
+                    "Biển báo hiệu hướng đi vòng tránh chướng ngại vật về bên phải.",
+                    R.drawable.r302a
+                ),
+                BienBao(
+                    "R.302b",
+                    "Hướng đi vòng chướng ngại vật bên trái",
+                    "Biển báo hiệu hướng đi vòng tránh chướng ngại vật về bên trái.",
+                    R.drawable.r302b
+                ),
+                BienBao(
+                    "R.302c",
+                    "Hướng đi vòng chướng ngại vật hai bên",
+                    "Biển báo hiệu được phép đi vòng tránh chướng ngại vật cả hai bên.",
+                    R.drawable.r302c
+                ),
+                BienBao(
+                    "R.303",
+                    "Nơi giao nhau chạy theo vòng xuyến",
+                    "Biển có hiệu lực bắt buộc các xe muốn chuyển hướng phải chạy vòng theo đảo an toàn theo hướng mũi tên tại nơi đường giao nhau (ngã ba, ngã tư).",
+                    R.drawable.r303
+                ),
+                BienBao(
+                    "R.304",
+                    "Đường dành cho xe thô sơ",
+                    "Biển báo đường dành cho xe thô sơ (kể cả xe của người khuyết tật) và người đi bộ, bắt buộc phải đi theo đường dành riêng này, cấm phương tiện giao thông cơ giới kể cả các xe được ưu tiên theo Luật Giao thông đường bộ đi vào đường đã đặt biển này, trừ trường hợp đi cắt ngang qua nhưng phải bảo đảm tuyệt đối an toàn cho người đi bộ.",
+                    R.drawable.r304
+                ),
+                BienBao(
+                    "R.305",
+                    "Đường dành cho người đi bộ",
+                    "Biển báo đường dành riêng cho người đi bộ. Các phương tiện giao thông đường bộ kể cả xe được ưu tiên theo Luật Giao thông đường bộ không được phép đi vào, trừ trường hợp đi cắt ngang qua, nhưng phải bảo đảm tuyệt đối an toàn cho người đi bộ.",
+                    R.drawable.r305
+                ),
+                BienBao(
+                    "R.306",
+                    "Tốc độ tối thiểu cho phép",
+                    "Biển báo tốc độ tối thiểu cho phép. Biển có hiệu lực bắt buộc các loại xe cơ giới chạy với tốc độ không nhỏ hơn trị số ghi trên biển trong điều kiện giao thông thuận lợi và an toàn. Các loại xe có tốc độ tối đa theo quy định của nhà sản xuất không đạt tốc độ tối thiểu đã ghi trên biển không được phép đi vào đường này.",
+                    R.drawable.r306
+                ),
+                BienBao(
+                    "R.307",
+                    "Hết hạn chế tốc độ tối thiểu",
+                    "Biển báo hết đoạn đường hạn chế tốc độ tối thiểu. Kể từ biển này các xe được phép chạy chậm hơn trị số ghi trên biển nhưng không được gây cản trở các xe khác.",
+                    R.drawable.r307
+                ),
+                BienBao(
+                    "R.308a",
+                    "Cầu vượt - chỉ đi thẳng hoặc rẽ trái",
+                    "Biển số R.308a báo cho người lái xe chỉ được đi thẳng hoặc rẽ trái trên cầu vượt.",
+                    R.drawable.r308a
+                ),
+                BienBao(
+                    "R.308b",
+                    "Cầu vượt - chỉ đi thẳng hoặc rẽ phải",
+                    "Biển số R.308b báo cho người lái xe chỉ được đi thẳng hoặc rẽ phải trên cầu vượt.",
+                    R.drawable.r308b
+                ),
+                BienBao(
+                    "R.309",
+                    "Ấn còi",
+                    "Biển báo lệnh cho người lái xe phải bấm còi.",
+                    R.drawable.r309
+                ),
+                BienBao(
+                    "I.401",
+                    "Bắt đầu đường ưu tiên",
+                    "Biển chỉ dẫn các phương tiện trên trục đường chính được ưu tiên đi trước ở nơi đường giao nhau, các phương tiện từ đường nhánh ra phải dừng lại nhường đường cho phương tiện trên đường chính đi trước, trừ các xe được ưu tiên theo Luật Giao thông đường bộ.",
+                    R.drawable.i401
+                ),
+                BienBao(
+                    "I.402",
+                    "Hết đường ưu tiên",
+                    "Biển chỉ dẫn đã hết đoạn đường ưu tiên. Trên đoạn đường tiếp theo, các xe đi đúng với tốc độ quy định, qua nơi giao nhau ưu tiên bên phải.",
+                    R.drawable.i402
+                ),
+                BienBao(
+                    "I.405a",
+                    "Đường cụt",
+                    "Biển chỉ dẫn đường cụt, không có lối thoát phía trước.",
+                    R.drawable.i405a
+                ),
+                BienBao(
+                    "I.405b",
+                    "Đường cụt",
+                    "Biển chỉ dẫn đường cụt, không có lối thoát phía trước.",
+                    R.drawable.i405b
+                ),
+                BienBao(
+                    "I.405c",
+                    "Đường cụt",
+                    "Biển chỉ dẫn đường cụt, không có lối thoát phía trước.",
+                    R.drawable.i405c
+                ),
+                BienBao(
+                    "I.406",
+                    "Được ưu tiên qua đường hẹp",
+                    "Biển chỉ dẫn có quyền được ưu tiên đi trước trên đoạn đường hẹp khi gặp xe đi ngược chiều, trừ trường hợp trên hướng đi ngược chiều có phương tiện đã đi vào phạm vi đường hẹp thì xe đi theo chiều ưu tiên cũng phải nhường đường.",
+                    R.drawable.i406
+                ),
+                BienBao(
+                    "I.407a",
+                    "Đường một chiều",
+                    "Chỉ cho phép các loại phương tiện giao thông đi vào theo chiều mũi tên chỉ, cấm quay đầu ngược lại (trừ các xe được quyền ưu tiên theo Luật Giao thông đường bộ).",
+                    R.drawable.i407a
+                ),
+                BienBao(
+                    "I.407b",
+                    "Đường một chiều",
+                    "Chỉ cho phép các loại phương tiện giao thông đi vào theo chiều mũi tên chỉ, cấm quay đầu ngược lại (trừ các xe được quyền ưu tiên theo Luật Giao thông đường bộ).",
+                    R.drawable.i407b
+                ),
+                BienBao(
+                    "I.407c",
+                    "Đường một chiều",
+                    "Chỉ cho phép các loại phương tiện giao thông đi vào theo chiều mũi tên chỉ, cấm quay đầu ngược lại (trừ các xe được quyền ưu tiên theo Luật Giao thông đường bộ).",
+                    R.drawable.i407c
+                ),
+                BienBao(
+                    "I.408",
+                    "Nơi đỗ xe",
+                    "Biển chỉ dẫn những nơi được phép đỗ xe, những bãi đỗ xe, bến xe v.v...",
+                    R.drawable.i408
+                ),
+                BienBao(
+                    "I.408a",
+                    "Nơi đỗ xe một phần trên hè phố",
+                    "Biển chỉ dẫn những nơi được phép đỗ xe một phần trên hè phố rộng, phải đặt biển số. Xe phải đỗ từ 1/2 thân xe trở lên trên hè phố.",
+                    R.drawable.i408a
+                ),
+                BienBao(
+                    "I.409",
+                    "Chỗ quay xe",
+                    "Biển chỉ dẫn vị trí được phép quay đầu xe kiểu chữ U. Biển không cấm rẽ trái.",
+                    R.drawable.i409
+                ),
+                BienBao(
+                    "I.410",
+                    "Khu vực quay xe",
+                    "Biển chỉ dẫn khu vực được phép quay đầu xe kiểu chữ U. Biển không cấm rẽ trái.",
+                    R.drawable.i410
+                ),
+                BienBao(
+                    "I.413a",
+                    "Đường phía trước có làn đường dành cho ô tô khách",
+                    "Biển chỉ dẫn đường có làn đường dành riêng cho xe ô tô khách theo chiều ngược lại. Biển được đặt ở ngã ba, ngã tư đầu đường một chiều mà hướng ngược chiều có xe ô tô khách được phép chạy.",
+                    R.drawable.i413a
+                ),
+                BienBao(
+                    "I.413b",
+                    "Rẽ ra đường có làn dành cho xe khách",
+                    "Biển chỉ dẫn ở ngã ba, ngã tư rẽ phải hoặc rẽ trái là rẽ ra đường có làn đường dành cho xe ô tô khách.",
+                    R.drawable.i413b
+                ),
+                BienBao(
+                    "I.413c",
+                    "Rẽ ra đường có làn dành cho xe khách",
+                    "Biển chỉ dẫn ở ngã ba, ngã tư rẽ phải hoặc rẽ trái là rẽ ra đường có làn đường dành cho xe ô tô khách.",
+                    R.drawable.i413c
+                ),
+                BienBao(
+                    "I.418",
+                    "Lối đi ở những chỗ cấm rẽ",
+                    "Biển chỉ dẫn lối đi thay thế ở những nơi cấm rẽ trái hoặc rẽ phải.",
+                    R.drawable.i418
+                ),
+                BienBao(
+                    "I.423a",
+                    "Đường người đi bộ sang ngang",
+                    "Biển chỉ dẫn vị trí đường dành cho người đi bộ sang ngang.",
+                    R.drawable.i423a
+                ),
+                BienBao(
+                    "I.437",
+                    "Đường cao tốc",
+                    "Để chỉ dẫn bắt đầu đường cao tốc, đặt biển số I.437 'Đường cao tốc'.",
+                    R.drawable.i437
+                ),
+                BienBao(
+                    "I.444",
+                    "Xe kéo moóc",
+                    "Biển này đặt trên nóc buồng lái của xe kéo moóc.",
+                    R.drawable.i444
+                ),
+                BienBao(
+                    "S.501",
+                    "Phạm vi tác dụng của biển",
+                    "Biển được đặt dưới các loại biển báo nguy hiểm, biển báo cấm hoặc hạn chế. Biển thông báo chiều dài đoạn đường nguy hiểm hay đoạn đường phải thi hành lệnh cấm hoặc hạn chế.",
+                    R.drawable.s501
+                ),
+                BienBao(
+                    "S.502",
+                    "Khoảng cách đến đối tượng báo hiệu",
+                    "Biển được đặt dưới các loại biển báo nguy hiểm, biển báo cấm hoặc hạn chế, biển hiệu lệnh và biển chỉ dẫn. Biển thông báo khoảng cách thực tế từ vị trí đặt biển đến đối tượng báo hiệu ở phía trước.",
+                    R.drawable.s502
+                ),
+                BienBao(
+                    "S.503a",
+                    "Hướng tác dụng của biển (trái)",
+                    "Biển phụ chỉ hướng tác dụng của biển báo chính (hướng mũi tên chỉ về phía trái).",
+                    R.drawable.s503a
+                ),
+                BienBao(
+                    "S.503b",
+                    "Hướng tác dụng của biển (phải)",
+                    "Biển phụ chỉ hướng tác dụng của biển báo chính (hướng mũi tên chỉ về phía phải).",
+                    R.drawable.s503b
+                ),
+                BienBao(
+                    "S.503c",
+                    "Hướng tác dụng của biển (xuống dưới)",
+                    "Biển phụ chỉ hướng tác dụng của biển báo chính (hướng mũi tên chỉ xuống dưới).",
+                    R.drawable.s503c
+                ),
+                BienBao(
+                    "S.503d",
+                    "Hướng tác dụng của biển (lên trên)",
+                    "Biển phụ chỉ hướng tác dụng của biển báo chính (hướng mũi tên chỉ lên trên).",
+                    R.drawable.s503d
+                ),
+                BienBao(
+                    "S.503e",
+                    "Hướng tác dụng của biển (chéo trái)",
+                    "Biển phụ chỉ hướng tác dụng của biển báo chính (hướng mũi tên chỉ chéo trái).",
+                    R.drawable.s503e
+                ),
+                BienBao(
+                    "S.503f",
+                    "Hướng tác dụng của biển (chéo phải)",
+                    "Biển phụ chỉ hướng tác dụng của biển báo chính (hướng mũi tên chỉ chéo phải).",
+                    R.drawable.s503f
+                ),
+                BienBao(
+                    "S.504",
+                    "Làn đường",
+                    "Biển phụ chỉ làn đường mà quy định của biển báo chính có tác dụng.",
+                    R.drawable.s504
+                ),
+                BienBao(
+                    "S.506a",
+                    "Hướng đường ưu tiên (rẽ trái)",
+                    "Biển phụ chỉ hướng đường ưu tiên (hướng rẽ trái).",
+                    R.drawable.s506a
+                ),
+                BienBao(
+                    "S.506b",
+                    "Hướng đường ưu tiên (rẽ phải)",
+                    "Biển phụ chỉ hướng đường ưu tiên (hướng rẽ phải).",
+                    R.drawable.s506b
                 )
+
             )
             cursor.close()
             list.forEach { insertBienBao(it) }
@@ -2835,47 +3334,4 @@ class MyDbHelper(context: Context) :
         return list
     }
 
-    // =====================================================
-    // =============== LUẬT GIAO THÔNG =====================
-    // =====================================================
-
-    fun createDefaultLuat() {
-        val db = readableDatabase
-        val cursor = db.rawQuery("SELECT * FROM Luat", null)
-        if (cursor.count == 0) {
-            val list = listOf(
-                Luat("L001", "Người điều khiển phương tiện giao thông đường bộ phải có giấy phép lái xe phù hợp với loại xe được phép điều khiển."),
-                Luat("L002", "Người ngồi trên xe mô tô, xe gắn máy phải đội mũ bảo hiểm và cài quai đúng quy cách."),
-                Luat("L003", "Người điều khiển xe phải nhường đường cho người đi bộ, xe lăn của người khuyết tật qua đường tại nơi có vạch kẻ đường cho người đi bộ."),
-                Luat("L004", "Cấm sử dụng rượu bia khi điều khiển phương tiện tham gia giao thông.")
-            )
-            cursor.close()
-            list.forEach { insertLuat(it) }
-        } else cursor.close()
-        db.close()
-    }
-
-    fun insertLuat(l: Luat) {
-        val db = writableDatabase
-        val values = ContentValues().apply {
-            put("MaLuat", l.maLuat)
-            put("NoiDung", l.noiDung)
-        }
-        db.insert("Luat", null, values)
-        db.close()
-    }
-
-    fun getAllLuat(): List<Luat> {
-        val list = mutableListOf<Luat>()
-        val db = readableDatabase
-        val cursor = db.rawQuery("SELECT * FROM Luat", null)
-        if (cursor.moveToFirst()) {
-            do {
-                list.add(Luat(cursor.getString(0), cursor.getString(1)))
-            } while (cursor.moveToNext())
-        }
-        cursor.close()
-        db.close()
-        return list
-    }
 }
