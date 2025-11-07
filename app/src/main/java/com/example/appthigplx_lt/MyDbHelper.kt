@@ -3333,5 +3333,32 @@ class MyDbHelper(context: Context) :
         db.close()
         return list
     }
+    // Lưu kết quả câu đúng (nếu sai thì không lưu)
+    fun saveCorrectAnswer(chuDe: String, cauHoi: String) {
+        val db = writableDatabase
+        db.execSQL(
+            """
+        INSERT OR REPLACE INTO ProgressDetail (ChuDe, CauHoi, IsCorrect)
+        VALUES (?, ?, 1)
+        """.trimIndent(),
+            arrayOf(chuDe, cauHoi)
+        )
+        db.close()
+    }
 
+    // Đếm số câu đúng của chủ đề
+    fun getCorrectCount(chuDe: String): Int {
+        val db = readableDatabase
+        val cursor = db.rawQuery(
+            "SELECT COUNT(*) FROM ProgressDetail WHERE ChuDe = ? AND IsCorrect = 1",
+            arrayOf(chuDe)
+        )
+        var count = 0
+        if (cursor.moveToFirst()) {
+            count = cursor.getInt(0)
+        }
+        cursor.close()
+        db.close()
+        return count
+    }
 }
