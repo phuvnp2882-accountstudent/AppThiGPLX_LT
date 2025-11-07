@@ -2737,6 +2737,33 @@ class MyDbHelper(context: Context) :
         db.close()
         return list
     }
+    fun getLyThuyetTheoBoDe(boDe: String): List<LyThuyet> {
+        val list = mutableListOf<LyThuyet>()
+        val db = readableDatabase
+        val cursor = db.rawQuery("SELECT * FROM LyThuyet WHERE BoDe = ?", arrayOf(boDe))
+
+        if (cursor.moveToFirst()) {
+            do {
+                list.add(
+                    LyThuyet(
+                        cauHoi = cursor.getString(cursor.getColumnIndexOrThrow("CauHoi")),
+                        dapAn1 = cursor.getString(cursor.getColumnIndexOrThrow("DapAn1")),
+                        dapAn2 = cursor.getString(cursor.getColumnIndexOrThrow("DapAn2")),
+                        dapAn3 = cursor.getString(cursor.getColumnIndexOrThrow("DapAn3")),
+                        dapAn4 = cursor.getString(cursor.getColumnIndexOrThrow("DapAn4")),
+                        dapAnDung = cursor.getString(cursor.getColumnIndexOrThrow("DapAnDung")),
+                        chuDe = cursor.getString(cursor.getColumnIndexOrThrow("ChuDe")),
+                        boDe = cursor.getString(cursor.getColumnIndexOrThrow("BoDe")),
+                        hinhAnh = cursor.getInt(cursor.getColumnIndexOrThrow("HinhAnh"))
+                    )
+                )
+            } while (cursor.moveToNext())
+        }
+
+        cursor.close()
+        db.close()
+        return list
+    }
 
     // =====================================================
     // =============== BIỂN BÁO GIAO THÔNG =================
