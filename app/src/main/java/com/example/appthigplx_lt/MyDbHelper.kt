@@ -2342,13 +2342,354 @@ class MyDbHelper(context: Context) :
                     chuDe = "Kỹ thuật lái xe"
                 ),
                 LyThuyet(
+                    cauHoi = "Theo hướng mũi tên, xe nào chấp hành đúng quy tắc giao thông?",
+                    dapAn1 = "Xe khách, xe tải, xe mô tô.",
+                    dapAn2 = "Xe tải, xe mô tô.",
+                    dapAn3 = "Chỉ xe con.",
+                    dapAn4 = "",
+                    dapAnDung = "3",
+                    hinhAnh = R.drawable.sh1,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Theo hướng mũi tên, thứ tự các xe đi như thế nào là đúng quy tắc giao thông?",
+                    dapAn1 = "Xe tải, xe khách, xe con, xe mô tô.",
+                    dapAn2 = "Xe tải, xe mô tô, xe khách, xe con.",
+                    dapAn3 = "Xe khách, xe tải, xe con, xe mô tô.",
+                    dapAn4 = "Xe mô tô, xe khách, xe tải, xe con.",
+                    dapAnDung = "2",
+                    hinhAnh = R.drawable.sh2,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Theo hướng mũi tên, thứ tự các xe đi như thế nào là đúng quy tắc giao thông?",
+                    dapAn1 = "Xe tải, xe con, xe mô tô.",
+                    dapAn2 = "Xe con, xe tải, xe mô tô.",
+                    dapAn3 = "Xe mô tô, xe con, xe tải.",
+                    dapAn4 = "Xe con, xe mô tô, xe tải.",
+                    dapAnDung = "3",
+                    hinhAnh = R.drawable.sh3,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
                     cauHoi = "Trường hợp này xe nào được quyền đi trước?",
-                    dapAn1 = "Xe mô tô",
+                    dapAn1 = "Xe mô tô.",
                     dapAn2 = "Xe con.",
                     dapAn3 = "",
                     dapAn4 = "",
                     dapAnDung = "2",
-                    chuDe = "Sa Hình"
+                    hinhAnh = R.drawable.sh4,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Xe nào được quyền đi trước trong trường hợp này?",
+                    dapAn1 = "Xe mô tô.",
+                    dapAn2 = "Xe cứu thương đi làm nhiệm vụ cấp cứu.",
+                    dapAn3 = "",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    hinhAnh = R.drawable.sh5,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Theo tín hiệu đèn, xe nào được phép đi?",
+                    dapAn1 = "Xe con và xe khách.",
+                    dapAn2 = "Xe mô tô.",
+                    dapAn3 = "",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    hinhAnh = R.drawable.sh6,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Theo tín hiệu đèn, xe nào đi là đúng quy tắc giao thông?",
+                    dapAn1 = "Xe khách, xe mô tô.",
+                    dapAn2 = "Xe con, xe tải.",
+                    dapAn3 = "Xe tải, xe mô tô.",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    hinhAnh = R.drawable.sh7,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Các xe đi theo hướng mũi tên, những xe nào vi phạm quy tắc giao thông?",
+                    dapAn1 = "Xe khách, xe tải, xe mô tô.",
+                    dapAn2 = "Xe tải, xe con, xe mô tô.",
+                    dapAn3 = "Xe khách, xe con, xe mô tô.",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    hinhAnh = R.drawable.sh8,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Theo hướng mũi tên, thứ tự các xe đi như thế nào là đúng quy tắc giao thông?",
+                    dapAn1 = "Xe khách, xe tải, xe mô tô, xe con.",
+                    dapAn2 = "Xe con, xe khách, xe tải, xe mô tô.",
+                    dapAn3 = "Xe mô tô, xe tải, xe khách, xe con.",
+                    dapAn4 = "Xe mô tô, xe tải, xe con, xe khách.",
+                    dapAnDung = "3",
+                    hinhAnh = R.drawable.sh9,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Trong trường hợp này xe nào đỗ vi phạm quy tắc giao thông?",
+                    dapAn1 = "Xe tải.",
+                    dapAn2 = "Xe con và mô tô.",
+                    dapAn3 = "Cả ba xe.",
+                    dapAn4 = "Xe con và xe tải.",
+                    dapAnDung = "1",
+                    hinhAnh = R.drawable.sh10,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Theo hướng mũi tên, những hướng nào xe gắn máy được phép đi?",
+                    dapAn1 = "Cả ba hướng.",
+                    dapAn2 = "Chỉ hướng 1 và 3.",
+                    dapAn3 = "Chỉ hướng 1.",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    hinhAnh = R.drawable.sh11,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Xe nào đỗ vi phạm quy tắc giao thông?",
+                    dapAn1 = "Cả hai xe.",
+                    dapAn2 = "Không xe nào vi phạm.",
+                    dapAn3 = "Chỉ xe mô tô vi phạm.",
+                    dapAn4 = "Chỉ xe tải vi phạm.",
+                    dapAnDung = "1",
+                    hinhAnh = R.drawable.sh12,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Xe nào đỗ vi phạm quy tắc giao thông?",
+                    dapAn1 = "Chỉ xe mô tô.",
+                    dapAn2 = "Chỉ xe tải.",
+                    dapAn3 = "Cả ba xe.",
+                    dapAn4 = "Chỉ xe mô tô và xe tải.",
+                    dapAnDung = "3",
+                    hinhAnh = R.drawable.sh13,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Xe nào được quyền đi trước trong trường hợp này?",
+                    dapAn1 = "Xe con.",
+                    dapAn2 = "Xe mô tô.",
+                    dapAn3 = "",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    hinhAnh = R.drawable.sh14,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Theo hướng mũi tên, thứ tự các xe đi như thế nào là đúng quy tắc giao thông?",
+                    dapAn1 = "Xe con (A), xe mô tô, xe con (B), xe đạp.",
+                    dapAn2 = "Xe con (B), xe đạp, xe mô tô, xe con (A).",
+                    dapAn3 = "Xe con (A), xe con (B), xe mô tô + xe đạp.",
+                    dapAn4 = "Xe mô tô + xe đạp, xe con (A), xe con (B).",
+                    dapAnDung = "4",
+                    hinhAnh = R.drawable.sh15,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Xe nào được quyền đi trước trong trường hợp này?",
+                    dapAn1 = "Xe mô tô.",
+                    dapAn2 = "Xe con.",
+                    dapAn3 = "",
+                    dapAn4 = "",
+                    dapAnDung = "1",
+                    hinhAnh = R.drawable.sh16,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Xe nào vi phạm quy tắc giao thông?",
+                    dapAn1 = "Xe khách.",
+                    dapAn2 = "Xe mô tô.",
+                    dapAn3 = "Xe con.",
+                    dapAn4 = "Xe con và xe mô tô.",
+                    dapAnDung = "3",
+                    hinhAnh = R.drawable.sh17,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Các xe đi như thế nào là đúng quy tắc giao thông?",
+                    dapAn1 = "Các xe ở tay phải và trái được phép đi thẳng.",
+                    dapAn2 = "Các xe ở mọi hướng được rẽ phải.",
+                    dapAn3 = "Tất cả xe phải dừng lại trừ xe đã ở trong ngã tư.",
+                    dapAn4 = "",
+                    dapAnDung = "3",
+                    hinhAnh = R.drawable.sh18,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Theo hướng mũi tên, xe nào được phép đi?",
+                    dapAn1 = "Xe mô tô, xe con.",
+                    dapAn2 = "Xe con, xe tải.",
+                    dapAn3 = "Xe mô tô, xe tải.",
+                    dapAn4 = "Cả ba xe.",
+                    dapAnDung = "3",
+                    hinhAnh = R.drawable.sh19,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Trong hình dưới đây, xe nào chấp hành đúng quy tắc giao thông?",
+                    dapAn1 = "Chỉ xe khách, xe mô tô.",
+                    dapAn2 = "Tất cả các loại xe.",
+                    dapAn3 = "Không xe nào đúng.",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    hinhAnh = R.drawable.sh20,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Theo hướng mũi tên, những hướng nào xe mô tô được phép đi?",
+                    dapAn1 = "Cả ba hướng.",
+                    dapAn2 = "Hướng 1 và 2.",
+                    dapAn3 = "Hướng 1 và 3.",
+                    dapAn4 = "Hướng 2 và 3.",
+                    dapAnDung = "3",
+                    hinhAnh = R.drawable.sh21,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Thứ tự xe đi đúng là gì?",
+                    dapAn1 = "Công an → Quân sự → Con + Mô tô.",
+                    dapAn2 = "Quân sự → Công an → Con + Mô tô.",
+                    dapAn3 = "Mô tô + Con → Quân sự → Công an.",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    hinhAnh = R.drawable.sh22,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Xe nào vi phạm?",
+                    dapAn1 = "Xe con (E), xe mô tô (C).",
+                    dapAn2 = "Xe tải (A), xe mô tô (D).",
+                    dapAn3 = "Xe khách (B), xe mô tô (C).",
+                    dapAn4 = "Xe khách (B), xe mô tô (D).",
+                    dapAnDung = "1",
+                    hinhAnh = R.drawable.sh23,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Xe nào vi phạm?",
+                    dapAn1 = "Xe con (B), xe mô tô (C).",
+                    dapAn2 = "Xe con (A), xe mô tô (C).",
+                    dapAn3 = "Xe con (E), xe mô tô (D).",
+                    dapAn4 = "Tất cả.",
+                    dapAnDung = "3",
+                    hinhAnh = R.drawable.sh24,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Xe nào phải dừng?",
+                    dapAn1 = "Xe khách, xe mô tô.",
+                    dapAn2 = "Xe tải, xe mô tô.",
+                    dapAn3 = "Xe con, xe tải.",
+                    dapAn4 = "",
+                    dapAnDung = "3",
+                    hinhAnh = R.drawable.sh25,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Được vượt không?",
+                    dapAn1 = "Cho phép.",
+                    dapAn2 = "Không được vượt.",
+                    dapAn3 = "",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    hinhAnh = R.drawable.sh26,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Xe nào vi phạm đèn?",
+                    dapAn1 = "Xe mô tô.",
+                    dapAn2 = "Xe ô tô con.",
+                    dapAn3 = "Không xe nào.",
+                    dapAn4 = "Cả hai.",
+                    dapAnDung = "4",
+                    hinhAnh = R.drawable.sh27,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Xe nào vi phạm?",
+                    dapAn1 = "Xe con.",
+                    dapAn2 = "Xe tải.",
+                    dapAn3 = "Xe con, xe tải.",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    hinhAnh = R.drawable.sh28,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Xe nào vi phạm?",
+                    dapAn1 = "Xe con, xe tải, xe khách.",
+                    dapAn2 = "Xe tải, xe khách, xe mô tô.",
+                    dapAn3 = "Xe khách, xe mô tô, xe con.",
+                    dapAn4 = "Cả bốn xe.",
+                    dapAnDung = "2",
+                    hinhAnh = R.drawable.sh29,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Xe nào đúng?",
+                    dapAn1 = "Xe tải, xe mô tô.",
+                    dapAn2 = "Xe khách, xe mô tô.",
+                    dapAn3 = "Xe tải, xe con.",
+                    dapAn4 = "Xe mô tô, xe con.",
+                    dapAnDung = "2",
+                    hinhAnh = R.drawable.sh30,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Thứ tự đúng?",
+                    dapAn1 = "Bạn → Mô tô → Con.",
+                    dapAn2 = "Con → Bạn → Mô tô.",
+                    dapAn3 = "Mô tô → Con → Bạn.",
+                    dapAn4 = "",
+                    dapAnDung = "3",
+                    hinhAnh = R.drawable.sh31,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Thứ tự đúng?",
+                    dapAn1 = "Bạn → Mô tô → Con.",
+                    dapAn2 = "Con → Bạn → Mô tô.",
+                    dapAn3 = "Mô tô → Con → Bạn.",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    hinhAnh = R.drawable.sh32,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Thứ tự đúng?",
+                    dapAn1 = "Bạn → Mô tô → Đạp.",
+                    dapAn2 = "Mô tô → Đạp → Bạn.",
+                    dapAn3 = "Đạp → Mô tô → Bạn.",
+                    dapAn4 = "",
+                    dapAnDung = "3",
+                    hinhAnh = R.drawable.sh33,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Xe dừng đúng?",
+                    dapAn1 = "Xe con.",
+                    dapAn2 = "Xe mô tô.",
+                    dapAn3 = "Cả 2 đúng.",
+                    dapAn4 = "",
+                    dapAnDung = "3",
+                    hinhAnh = R.drawable.sh34,
+                    chuDe = "Sa hình"
+                ),
+                LyThuyet(
+                    cauHoi = "Đi thế nào an toàn?",
+                    dapAn1 = "Vượt phải.",
+                    dapAn2 = "Chờ container rẽ xong.",
+                    dapAn3 = "Vượt trái.",
+                    dapAn4 = "",
+                    dapAnDung = "2",
+                    hinhAnh = R.drawable.sh35,
+                    chuDe = "Sa hình"
                 ),
 
                 )
