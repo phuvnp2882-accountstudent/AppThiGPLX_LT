@@ -1024,6 +1024,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Biển 1 và 3",
                     dapAn4 = "Cả ba biển",
                     dapAnDung = "2",
+                    hinhAnh = R.drawable.bbdb1,
                     chuDe = "Biển báo đường bộ"
                 ),
                 LyThuyet(
@@ -1033,6 +1034,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Biển 2 và 3",
                     dapAn4 = "",
                     dapAnDung = "1",
+                    hinhAnh = R.drawable.bbdb2,
                     chuDe = "Biển báo đường bộ"
                 ),
                 LyThuyet(
@@ -1042,6 +1044,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Cả hai biển",
                     dapAn4 = "",
                     dapAnDung = "3",
+                    hinhAnh = R.drawable.bbdb3,
                     chuDe = "Biển báo đường bộ"
                 ),
                 LyThuyet(
@@ -1051,6 +1054,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Biển 3",
                     dapAn4 = "",
                     dapAnDung = "1",
+                    hinhAnh = R.drawable.bbdb4,
                     chuDe = "Biển báo đường bộ"
                 ),
                 LyThuyet(
@@ -1060,6 +1064,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Biển 2 và 3",
                     dapAn4 = "Cả ba biển",
                     dapAnDung = "3",
+                    hinhAnh = R.drawable.bbdb5,
                     chuDe = "Biển báo đường bộ"
                 ),
                 LyThuyet(
@@ -1069,6 +1074,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Không biển nào",
                     dapAn4 = "Cả 2 biển",
                     dapAnDung = "2",
+                    hinhAnh = R.drawable.bbdb6,
                     chuDe = "Biển báo đường bộ"
                 ),
                 LyThuyet(
