@@ -3388,4 +3388,20 @@ class MyDbHelper(context: Context) :
         db.close()
         return count
     }
+
+    //Đếm tổng số câu đúng của chủ đề
+    fun getTotalCorrectCount(): Int {
+        val db = readableDatabase
+        val cursor = db.rawQuery(
+            "SELECT COUNT(*) FROM ProgressDetail WHERE IsCorrect = 1",
+            null
+        )
+        var count = 0
+        if (cursor.moveToFirst()) {
+            count = cursor.getInt(0)
+        }
+        cursor.close()
+        db.close()
+        return count
+    }
 }
