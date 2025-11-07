@@ -12,7 +12,8 @@ class MyDbHelper(context: Context) :
         // === BẢNG LÝ THUYẾT ===
         db.execSQL("""
             CREATE TABLE LyThuyet(
-                CauHoi TEXT PRIMARY KEY,
+                ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                CauHoi TEXT,
                 DapAn1 TEXT,
                 DapAn2 TEXT,
                 DapAn3 TEXT,
@@ -32,19 +33,25 @@ class MyDbHelper(context: Context) :
             )
         """.trimIndent())
 
-        // === BẢNG LUẬT GIAO THÔNG ===
-        db.execSQL("""
-            CREATE TABLE Luat(
-                MaLuat TEXT PRIMARY KEY,
-                NoiDung TEXT
+
+        // === BẢNG CHI TIẾT TIẾN ĐỘ ===
+        db.execSQL(
+            """
+            CREATE TABLE IF NOT EXISTS ProgressDetail(
+                ChuDe TEXT,
+                CauHoi TEXT,
+                IsCorrect INTEGER,
+                PRIMARY KEY (ChuDe, CauHoi)
             )
-        """.trimIndent())
+        """.trimIndent()
+        )
     }
+
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         db.execSQL("DROP TABLE IF EXISTS LyThuyet")
         db.execSQL("DROP TABLE IF EXISTS BienBao")
-        db.execSQL("DROP TABLE IF EXISTS Luat")
+
         onCreate(db)
     }
 
