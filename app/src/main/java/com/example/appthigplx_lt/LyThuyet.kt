@@ -7,5 +7,7 @@ data class LyThuyet(
     val dapAn3: String,
     val dapAn4: String,
     val dapAnDung: String,
-    val chuDe: String
+    val chuDe: String,
+    val boDe: String = "",
+    val hinhAnh: Int? = null
 )
