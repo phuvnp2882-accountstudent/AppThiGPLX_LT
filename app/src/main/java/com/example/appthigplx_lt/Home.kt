@@ -39,6 +39,27 @@ fun Home(navController: NavController) {
                 .padding(padding)
                 .fillMaxSize()
         ) {
+            // Header section
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(16.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Text(
+                    "250 CÂU HỎI",
+                    fontSize = 16.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color(0xFF1976D2)
+                )
+                Text(
+                    "ĐỘNG CHI KHÔI LÀM XE HẠNG ẢA SÁI",
+                    fontSize = 14.sp,
+                    textAlign = TextAlign.Center,
+                    color = Color.Gray
+                )
+
+                Spacer(modifier = Modifier.height(16.dp))
             // Main buttons section
             Column(
                 modifier = Modifier
@@ -127,6 +148,12 @@ fun HomePreview() {
         Home(navController)
     }
 }
+
+
+
+
+
+
 
 
 
