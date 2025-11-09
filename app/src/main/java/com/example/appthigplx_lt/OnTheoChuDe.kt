@@ -19,3 +19,29 @@ data class ChuDe(
     val tong: Int
 )
 
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun OnTheoChuDe(navController: NavController) {
+    val context = LocalContext.current
+    val db = remember { MyDbHelper(context) }
+
+    val danhSachChuDeCoDinh = listOf(
+        "Câu điểm liệt",
+        "Sa hình",
+        "Khái niệm và Quy tắc",
+        "Văn hóa và đạo đức lái xe",
+        "Kỹ thuật lái xe",
+        "Biển báo đường bộ"
+    )
+
+    var danhSachChuDe by remember { mutableStateOf(listOf<ChuDe>()) }
+
+    // Load tiến độ từ DB
+    LaunchedEffect(Unit) {
+        val list = danhSachChuDeCoDinh.map { ten ->
+            val daLam = db.getCorrectCount(ten)
+            val tong = db.getLyThuyetTheoChuDe(ten).size
+            ChuDe(ten, daLam, tong)
+        }
+        danhSachChuDe = list
+    }
