@@ -45,3 +45,49 @@ fun OnTheoChuDe(navController: NavController) {
         }
         danhSachChuDe = list
     }
+    Scaffold(
+        topBar = { TopAppBar(title = { Text("Ôn tập theo chủ đề") }) }
+    ) { padding ->
+        LazyColumn(
+            modifier = Modifier
+                .padding(padding)
+                .padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
+            items(danhSachChuDe) { chuDe ->
+                Card(
+                    modifier = Modifier.fillMaxWidth(),
+                    colors = CardDefaults.cardColors(containerColor = Color.White),
+                    elevation = CardDefaults.cardElevation(4.dp),
+                    onClick = {
+                        navController.navigate("onLyThuyet/${chuDe.ten}")
+                    }
+                ) {
+                    Column(
+                        modifier = Modifier
+                            .padding(16.dp)
+                            .fillMaxWidth()
+                    ) {
+                        Text(
+                            text = chuDe.ten.uppercase(),
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 16.sp
+                        )
+                        Spacer(modifier = Modifier.height(8.dp))
+                        LinearProgressIndicator(
+                            progress = if (chuDe.tong > 0) chuDe.daLam.toFloat() / chuDe.tong.toFloat() else 0f,
+                            modifier = Modifier.fillMaxWidth(),
+                            color = Color(0xFF00C2A0)
+                        )
+                        Spacer(modifier = Modifier.height(4.dp))
+                        Text(
+                            text = "${chuDe.daLam}/${chuDe.tong} câu",
+                            fontSize = 14.sp,
+                            color = Color.Gray
+                        )
+                    }
+                }
+            }
+        }
+    }
+}
