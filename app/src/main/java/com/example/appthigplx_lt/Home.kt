@@ -60,6 +60,39 @@ fun Home(navController: NavController) {
                 )
 
                 Spacer(modifier = Modifier.height(16.dp))
+
+                // Progress section
+                Card(
+                    modifier = Modifier.fillMaxWidth(),
+                    elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
+                ) {
+                    Column(
+                        modifier = Modifier.padding(16.dp)
+                    ) {
+                        Text(
+                            "TIẾN ĐỘ ÔN TẬP",
+                            fontSize = 14.sp,
+                            fontWeight = FontWeight.Medium
+                        )
+                        Spacer(modifier = Modifier.height(8.dp))
+                        Text(
+                            "112/250 câu",
+                            fontSize = 18.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = Color(0xFF1976D2)
+                        )
+                        Spacer(modifier = Modifier.height(8.dp))
+                        LinearProgressIndicator(
+                            progress = 112f / 250f,
+                            modifier = Modifier.fillMaxWidth(),
+                            color = Color(0xFF1976D2)
+                        )
+                    }
+                }
+            }
+
+            Spacer(modifier = Modifier.height(24.dp))
+
             // Main buttons section
             Column(
                 modifier = Modifier
@@ -148,12 +181,5 @@ fun HomePreview() {
         Home(navController)
     }
 }
-
-
-
-
-
-
-
 
 
