@@ -151,4 +151,65 @@ fun OnLyThuyet(navController: NavController, chuDe: String) {
                     ) {
                         Text(text = text, fontSize = 16.sp)
                     }
+                }
 
+                // 🔹 Kết quả & Nút tiếp theo
+                if (showResult) {
+                    item {
+                        Spacer(modifier = Modifier.height(12.dp))
+                        val isCorrect = selectedAnswer == currentQuestion.dapAnDung
+                        Text(
+                            text = if (isCorrect)
+                                "✅ Chính xác!"
+                            else
+                                "❌ Sai rồi. Đáp án đúng là: ${currentQuestion.dapAnDung}",
+                            color = if (isCorrect) MaterialTheme.colorScheme.primary
+                            else MaterialTheme.colorScheme.error,
+                            fontSize = 16.sp,
+                            fontWeight = FontWeight.SemiBold
+                        )
+
+                        Spacer(modifier = Modifier.height(16.dp))
+                        Button(
+                            onClick = {
+                                if (currentIndex < listLyThuyet.size - 1) {
+                                    currentIndex++
+                                    selectedAnswer = null
+                                    showResult = false
+                                } else {
+                                    // Khi đã hết câu chưa đúng -> reload để cập nhật
+                                    val chuaDung = db.getLyThuyetTheoChuDe(chuDe)
+                                        .filter { !db.isAnsweredCorrectly(chuDe, it.cauHoi) }
+                                    listLyThuyet = chuaDung
+                                    currentIndex = 0
+                                    selectedAnswer = null
+                                    showResult = false
+                                }
+                            },
+                            modifier = Modifier.fillMaxWidth()
+                        ) {
+                            Text(
+                                text = if (currentIndex < listLyThuyet.size - 1)
+                                    "Câu tiếp theo"
+                                else
+                                    "Cập nhật tiến độ",
+                                fontSize = 16.sp
+                            )
+                        }
+
+                        Spacer(modifier = Modifier.height(40.dp))
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun PreviewOnLyThuyet() {
+    MaterialTheme {
+        val fakeNav = androidx.navigation.compose.rememberNavController()
+        OnLyThuyet(fakeNav, "Câu điểm liệt")
+    }
+}
