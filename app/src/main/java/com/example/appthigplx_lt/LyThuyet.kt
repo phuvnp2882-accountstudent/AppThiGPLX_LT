@@ -1,4 +1,4 @@
-package com.example.appthigplx
+package com.example.appthigplx_lt
 
 data class LyThuyet(
     val cauHoi: String,

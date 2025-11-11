@@ -1,4 +1,4 @@
-package com.example.appthigplx
+package com.example.appthigplx_lt
 
 import android.content.ContentValues
 import android.content.Context
