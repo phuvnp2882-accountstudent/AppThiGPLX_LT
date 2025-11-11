@@ -3,7 +3,7 @@
 ## 📖 1. Lý do chọn đề tài
 Hiện nay, việc ôn luyện lý thuyết lái xe mô tô hạng A1, A chủ yếu dựa vào sách giấy hoặc các nguồn thông tin rời rạc trên internet. Điều này khiến người học gặp nhiều khó khăn trong việc tra cứu, ghi nhớ và luyện tập hiệu quả.
 
-Ứng dụng **Ôn thi GPLX A, A1** được xây dựng với mục tiêu mang đến **trải nghiệm học tập thông minh – tiện lợi – linh hoạt**, giúp người học có thể:
+Ứng dụng **Ôn thi GPLX A1, A** được xây dựng với mục tiêu mang đến **trải nghiệm học tập thông minh – tiện lợi – linh hoạt**, giúp người học có thể:
 - Ôn tập mọi lúc, mọi nơi.
 - Theo dõi tiến độ học tập.
 - Ghi nhớ nhanh hơn nhờ giao diện trực quan và tính năng hỗ trợ học tập hiện đại.
@@ -94,7 +94,7 @@ Người dùng có thể:
 ---
 
 ### 🏁 Kết luận
-Ứng dụng **Ôn Thi GPLX A, A1** không chỉ giúp người dùng học nhanh – nhớ lâu mà còn góp phần hiện đại hoá phương pháp ôn tập truyền thống, hướng tới mục tiêu **“Học hiệu quả – Thi dễ dàng – Đạt kết quả cao”**.
+Ứng dụng **Ôn Thi GPLX A1, A** không chỉ giúp người dùng học nhanh – nhớ lâu mà còn góp phần hiện đại hoá phương pháp ôn tập truyền thống, hướng tới mục tiêu **“Học hiệu quả – Thi dễ dàng – Đạt kết quả cao”**.
 
 ---
 
