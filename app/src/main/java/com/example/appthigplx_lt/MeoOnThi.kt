@@ -67,7 +67,7 @@ fun MeoOnThi(navController: NavController) {
             )
         ),
         MeoGroup(
-            "⚙️ Cấu tạo & sửa chữa", listOf(
+            "⚙️ Cấu tạo & Sửa chữa", listOf(
                 "Yêu cầu của kính chắn gió, chọn loại kính an toàn.",
                 "Âm lượng của còi là từ 90dB đến 115 dB.",
                 "Động cơ diesel không nổ do nhiên liệu lẫn tạp chất.",
