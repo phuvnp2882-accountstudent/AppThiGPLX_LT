@@ -72,5 +72,48 @@ fun KetQua(navController: NavController, tongDiem: Int) {
                 )
 
                 Spacer(modifier = Modifier.height(40.dp))
+                Button(
+                    onClick = {
+                        // Quay lại màn hình Home
+                        navController.navigate("home") {
+                            popUpTo("home") { inclusive = true }
+                        }
+                    },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(56.dp),
+                    colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.secondary)
+                ) {
+                    Text("VỀ TRANG CHỦ", fontSize = 18.sp, fontWeight = FontWeight.Medium)
+                }
+
+                Button(
+                    onClick = {
+                        // Làm lại bài thi
+                        navController.navigate("thiSatHach") {
+                            popUpTo("thiSatHach") { inclusive = true }
+                        }
+                    },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(56.dp),
+                    colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary)
+                ) {
+                    Text("THI LẠI", fontSize = 18.sp, fontWeight = FontWeight.Medium)
+                }
+            }
+        }
+    }
+}
+
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun PreviewKetQua() {
+    MaterialTheme {
+        val fakeNav = rememberNavController()
+        KetQua(navController = fakeNav, tongDiem = 23)
+    }
+}
+
 
 
