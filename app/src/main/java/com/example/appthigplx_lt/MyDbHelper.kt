@@ -140,7 +140,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Gồm xe ô tô, máy kéo, rơ moóc hoặc sơ mi rơ moóc được kéo bởi xe ô tô, máy kéo.",
                     dapAn4 = "",
                     dapAnDung = "1",
-                    boDe = "2",
+                    boDe = "1",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -210,6 +210,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Được cơ quan có thẩm quyền cấp phép.",
                     dapAn4 = "",
                     dapAnDung = "3",
+                    boDe = "2",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -219,6 +220,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Không bị nghiêm cấm, nếu có chất ma túy ở mức nhẹ, có thể điều khiển phương tiện tham gia giao thông.",
                     dapAn4 = "",
                     dapAnDung = "1",
+                    boDe = "2",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
