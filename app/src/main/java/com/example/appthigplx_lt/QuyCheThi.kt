@@ -1,7 +1,5 @@
 package com.example.appthigplx_lt
 
-
-
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -57,6 +55,17 @@ fun QuyCheThi(navController: NavController, boDe: String) {
                 fontSize = 16.sp,
                 lineHeight = 22.sp
             )
+
+            Spacer(modifier = Modifier.height(40.dp))
+
+            Button(
+                onClick = {
+                    navController.navigate("thiSatHach/$boDe")
+                },
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text("BẮT ĐẦU THI", fontSize = 18.sp)
+            }
         }
-    }
+
 }
