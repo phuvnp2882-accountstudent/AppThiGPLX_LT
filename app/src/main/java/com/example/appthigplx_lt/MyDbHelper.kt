@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
 class MyDbHelper(context: Context) :
-    SQLiteOpenHelper(context, "DB_OnThiGPLX", null, 11) {
+    SQLiteOpenHelper(context, "DB_OnThiGPLX", null, 2) {
 
     override fun onCreate(db: SQLiteDatabase) {
         // === BẢNG LÝ THUYẾT ===
@@ -2151,7 +2151,7 @@ class MyDbHelper(context: Context) :
                     dapAn4 = "",
                     dapAnDung = "3",
                     boDe = "2",
-                    chuDe = " Câu điểm liệt "
+                    chuDe = "Câu điểm liệt"
                 ),
                 LyThuyet(
                     cauHoi = "Tổ chức đua xe được phép thực hiện khi nào?",
@@ -2161,7 +2161,7 @@ class MyDbHelper(context: Context) :
                     dapAn4 = "",
                     dapAnDung = "3",
                     boDe = "3",
-                    chuDe = " Câu điểm liệt "
+                    chuDe = "Câu điểm liệt"
                 ),
                 LyThuyet(
                     cauHoi = "Hành vi đua xe trái phép bị xử lý như thế nào?",
@@ -2171,7 +2171,7 @@ class MyDbHelper(context: Context) :
                     dapAn4 = "",
                     dapAnDung = "2",
                     boDe = "4",
-                    chuDe = " Câu điểm liệt "
+                    chuDe = "Câu điểm liệt"
                 ),
                 LyThuyet(
                     cauHoi = "Người điều khiển phương tiện tham gia giao thông đường bộ mà trong máu hoặc hơi thở có nồng độ cồn có bị nghiêm cấm không?",
@@ -2181,7 +2181,7 @@ class MyDbHelper(context: Context) :
                     dapAn4 = "",
                     dapAnDung = "1",
                     boDe = "5",
-                    chuDe = " Câu điểm liệt "
+                    chuDe = "Câu điểm liệt"
                 ),
                 LyThuyet(
                     cauHoi = "Theo Luật Phòng chống tác hại của rượu, bia, đối tượng nào dưới đây bị cấm sử dụng rượu, bia khi tham gia giao thông?",
@@ -2191,7 +2191,7 @@ class MyDbHelper(context: Context) :
                     dapAn4 = "",
                     dapAnDung = "1",
                     boDe = "6",
-                    chuDe = " Câu điểm liệt "
+                    chuDe = "Câu điểm liệt"
                 ),
                 LyThuyet(
                     cauHoi = "Hành vi giao xe ô tô, mô tô cho người nào sau đây tham gia giao thông đường bộ bị nghiêm cấm?",
@@ -2200,7 +2200,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Người có giấy phép lái xe nhưng đã bị trừ hết 12 điểm.",
                     dapAn4 = "Cả ba ý trên.",
                     dapAnDung = "4",
-                    chuDe = " Câu điểm liệt "
+                    chuDe = "Câu điểm liệt"
                 ),
                 LyThuyet(
                     cauHoi = "Hành vi nào sau đây bị nghiêm cấm?",
@@ -2209,7 +2209,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Cả hai ý trên.",
                     dapAn4 = "",
                     dapAnDung = "3",
-                    chuDe = " Câu điểm liệt "
+                    chuDe = "Câu điểm liệt"
                 ),
                 LyThuyet(
                     cauHoi = "Hành vi nào sau đây bị cấm?",
@@ -2218,7 +2218,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Cả hai ý trên.",
                     dapAn4 = "",
                     dapAnDung = "3",
-                    chuDe = " Câu điểm liệt "
+                    chuDe = "Câu điểm liệt"
                 ),
                 LyThuyet(
                     cauHoi = "Người lái xe được phép vượt xe trên cầu hẹp có một làn đường, đường cong có tầm nhìn bị hạn chế hay không?",
@@ -2227,7 +2227,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Được phép vượt khi có việc gấp.",
                     dapAn4 = "",
                     dapAnDung = "2",
-                    chuDe = " Câu điểm liệt "
+                    chuDe = "Câu điểm liệt"
                 ),
                 LyThuyet(
                     cauHoi = "Muốn vượt xe phía trước, người lái xe mô tô phải có tín hiệu như thế nào dưới đây để bảo đảm an toàn?",
@@ -2236,7 +2236,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Báo hiệu nhấp nháy bằng đèn chiếu sáng phía trước hoặc còi.",
                     dapAn4 = "",
                     dapAnDung = "3",
-                    chuDe = " Câu điểm liệt "
+                    chuDe = "Câu điểm liệt"
                 ),
                 LyThuyet(
                     cauHoi = "Khi điều khiển phương tiện tham gia giao thông, hành vi nào sau đây bị cấm?",
@@ -2245,7 +2245,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "",
                     dapAn4 = "",
                     dapAnDung = "1",
-                    chuDe = " Câu điểm liệt "
+                    chuDe = "Câu điểm liệt"
                 ),
                 LyThuyet(
                     cauHoi = "Người lái xe không được vượt xe khác khi gặp trường hợp nào dưới đây?",
@@ -2254,7 +2254,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Trên đường có 02 làn đường được phân chia làn bằng vạch kẻ nét đứt.",
                     dapAn4 = "",
                     dapAnDung = "1",
-                    chuDe = " Câu điểm liệt "
+                    chuDe = "Câu điểm liệt"
                 ),
                 LyThuyet(
                     cauHoi = "Người điều khiển xe mô tô hai bánh, xe mô tô ba bánh, xe gắn máy có được phép sử dụng xe để kéo hoặc đẩy các phương tiện khác khi tham gia giao thông không?",
@@ -2263,7 +2263,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Tùy trường hợp.",
                     dapAn4 = "Không được phép.",
                     dapAnDung = "4",
-                    chuDe = " Câu điểm liệt "
+                    chuDe = "Câu điểm liệt"
                 ),
                 LyThuyet(
                     cauHoi = "Khi điều khiển xe mô tô hai bánh, xe mô tô ba bánh, xe gắn máy, những hành vi nào sau đây không được phép?",
@@ -2272,7 +2272,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "",
                     dapAn4 = "",
                     dapAnDung = "1",
-                    chuDe = " Câu điểm liệt "
+                    chuDe = "Câu điểm liệt"
                 ),
                 LyThuyet(
                     cauHoi = "Khi điều khiển xe mô tô hai bánh, xe mô tô ba bánh, xe gắn máy, những hành vi nào sau đây không được phép?",
@@ -2281,7 +2281,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Đội mũ bảo hiểm; chạy xe đúng tốc độ quy định và chấp hành đúng quy tắc giao thông đường bộ.",
                     dapAn4 = "Chở người ngồi sau dưới 16 tuổi.",
                     dapAnDung = "1",
-                    chuDe = " Câu điểm liệt "
+                    chuDe = "Câu điểm liệt"
                 ),
                 LyThuyet(
                     cauHoi = "Người lái xe, người được chở trên xe mô tô hai bánh, xe mô tô ba bánh, xe gắn máy phải thực hiện quy định nào dưới đây?",
@@ -2290,7 +2290,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Phải đội mũ bảo hiểm nhưng không nhất thiết phải cài quai.",
                     dapAn4 = "",
                     dapAnDung = "1",
-                    chuDe = " Câu điểm liệt "
+                    chuDe = "Câu điểm liệt"
                 ),
                 LyThuyet(
                     cauHoi = "Người lái xe mô tô hai bánh, xe mô tô ba bánh, xe gắn máy không được thực hiện các hành vi nào dưới đây?",
@@ -2299,7 +2299,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Ngồi về một bên điều khiển xe; đứng, nằm trên xe điều khiển xe; thay người lái xe khi xe đang chạy; quay người về phía sau để điều khiển xe hoặc bịt mắt điều khiển xe; sử dụng chân chống hoặc vật khác quệt xuống đường khi xe đang chạy.",
                     dapAn4 = "Cả ba ý trên.",
                     dapAnDung = "4",
-                    chuDe = " Câu điểm liệt "
+                    chuDe = "Câu điểm liệt"
                 ),
                 LyThuyet(
                     cauHoi = "Người lái xe mô tô hai bánh, xe mô tô ba bánh, xe gắn máy không được thực hiện các hành vi nào sau đây?",
@@ -2308,7 +2308,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Cả hai ý trên.",
                     dapAn4 = "",
                     dapAnDung = "3",
-                    chuDe = " Câu điểm liệt "
+                    chuDe = "Câu điểm liệt"
                 ),
                 LyThuyet(
                     cauHoi = "Người lái xe mô tô hai bánh, xe mô tô ba bánh, xe gắn máy không được thực hiện hành vi nào sau đây?",
@@ -2317,7 +2317,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Cả hai ý trên.",
                     dapAn4 = "",
                     dapAnDung = "2",
-                    chuDe = " Câu điểm liệt "
+                    chuDe = "Câu điểm liệt"
                 ),
                 LyThuyet(
                     cauHoi = "Khi điều khiển xe mô tô tay ga xuống đường dốc dài, độ dốc cao, người lái xe cần thực hiện các thao tác nào dưới đây để bảo đảm an toàn?",
