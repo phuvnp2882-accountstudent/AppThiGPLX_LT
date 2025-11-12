@@ -70,6 +70,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Phần đường xe cơ giới.",
                     dapAn4 = "",
                     dapAnDung = "2",
+                    boDe = "1",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -79,6 +80,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "3.Là đường cho xe ô tô chạy, dừng, đỗ an toàn.",
                     dapAn4 = "",
                     dapAnDung = "2",
+                    boDe = "1",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -88,6 +90,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Là bộ phận của đường để phân chia mặt đường thành hai chiều xe chạy riêng biệt hoặc để phân chia phần đường của xe cơ giới và xe thô sơ.",
                     dapAn4 = "",
                     dapAnDung = "3",
+                    boDe = "1",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -97,6 +100,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Dải phân cách gồm giá long môn và biển báo hiệu đường bộ.",
                     dapAn4 = "",
                     dapAnDung = "1",
+                    boDe = "1",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -106,6 +110,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Là người điều khiển xe có súc vật kéo.",
                     dapAn4 = "",
                     dapAnDung = "1",
+                    boDe = "1",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -115,6 +120,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Đường quốc lộ.",
                     dapAn4 = "Đường ưu tiên.",
                     dapAnDung = "4",
+                    boDe = "1",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -124,6 +130,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "",
                     dapAn4 = "",
                     dapAnDung = "2",
+                    boDe = "1",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -133,6 +140,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Gồm xe ô tô, máy kéo, rơ moóc hoặc sơ mi rơ moóc được kéo bởi xe ô tô, máy kéo.",
                     dapAn4 = "",
                     dapAnDung = "1",
+                    boDe = "1",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -142,6 +150,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Cả ý 1 và ý 2.",
                     dapAn4 = "",
                     dapAnDung = "3",
+                    boDe = "2",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -151,6 +160,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Cả ý 1 và ý 2.",
                     dapAn4 = "",
                     dapAnDung = "3",
+                    boDe = "2",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -160,6 +170,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Cả ý 1 và ý 2.",
                     dapAn4 = "",
                     dapAnDung = "3",
+                    boDe = "2",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -169,6 +180,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Là người tham gia giao thông tại nơi thi công, nơi ùn tắc giao thông, ở bến phà, tại cầu đường bộ đi chung với đường sắt.",
                     dapAn4 = "",
                     dapAnDung = "2",
+                    boDe = "2",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -178,6 +190,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Là trạng thái đứng yên của phương tiện giao thông không giới hạn thời gian giữa 02 lần vận chuyển hàng hóa hoặc hành khách.",
                     dapAn4 = "",
                     dapAnDung = "2",
+                    boDe = "2",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -187,6 +200,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "",
                     dapAn4 = "",
                     dapAnDung = "2",
+                    boDe = "2",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -196,6 +210,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Được cơ quan có thẩm quyền cấp phép.",
                     dapAn4 = "",
                     dapAnDung = "3",
+                    boDe = "2",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -205,6 +220,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Không bị nghiêm cấm, nếu có chất ma túy ở mức nhẹ, có thể điều khiển phương tiện tham gia giao thông.",
                     dapAn4 = "",
                     dapAnDung = "1",
+                    boDe = "2",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -213,6 +229,7 @@ class MyDbHelper(context: Context) :
                     dapAn2 = "Bị xử phạt hành chính hoặc có thể bị xử lý hình sự tùy theo mức độ vi phạm.",
                     dapAn3 = "Không bị xử lý hình sự.",
                     dapAn4 = "",
+                    boDe = "3",
                     dapAnDung = "2",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
@@ -223,6 +240,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Người đi bộ.",
                     dapAn4 = "Cả ý 1 và ý 2.",
                     dapAnDung = "1",
+                    boDe = "1",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -232,6 +250,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Bị nghiêm cấm.",
                     dapAn4 = "",
                     dapAnDung = "3",
+                    boDe = "3",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -241,6 +260,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Từ 23 giờ đêm đến 5 giờ sáng hôm sau.",
                     dapAn4 = "",
                     dapAnDung = "2",
+                    boDe = "3",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -250,6 +270,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Đèn chiếu xa (đèn pha) khi đường vắng, đèn pha chiếu gần (đèn cốt) khi có xe đi ngược chiều.",
                     dapAn4 = "Đèn chiếu gần (đèn cốt).",
                     dapAnDung = "4",
+                    boDe = "3",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -259,6 +280,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Phải là xe đăng ký và hoạt động tại các khu vực có địa hình phức tạp.",
                     dapAn4 = "",
                     dapAnDung = "2",
+                    boDe = "3",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -268,6 +290,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Tùy từng trường hợp.",
                     dapAn4 = "",
                     dapAnDung = "2",
+                    boDe = "3",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -277,6 +300,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Được phép vượt khi đi qua nơi giao nhau có ít phương tiện cùng tham gia giao thông.",
                     dapAn4 = "Được vượt khi đảm bảo an toàn.",
                     dapAnDung = "4",
+                    boDe = "3",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -286,6 +310,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Được phép vượt khi đi qua nơi giao nhau có ít phương tiện cùng tham gia giao thông.",
                     dapAn4 = "Được vượt khi đảm bảo an toàn.",
                     dapAnDung = "1",
+                    boDe = "3",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -295,6 +320,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Tùy trường hợp.",
                     dapAn4 = "Không được phép.",
                     dapAnDung = "4",
+                    boDe = "2",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -304,6 +330,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Không được phép.",
                     dapAn4 = "",
                     dapAnDung = "3",
+                    boDe = "4",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -313,6 +340,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Đội mũ bảo hiểm; chạy xe đúng tốc độ quy định và chấp hành đúng quy tắc giao thông đường bộ.",
                     dapAn4 = "Chở người ngồi sau dưới 16 tuổi.",
                     dapAnDung = "1",
+                    boDe = "3",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -322,6 +350,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Được mang, vác nhưng phải đảm bảo an toàn.",
                     dapAn4 = "Được mang, vác tùy theo sức khỏe của bản thân.",
                     dapAnDung = "2",
+                    boDe = "4",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -331,6 +360,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Được kéo, đẩy trong trường hợp phương tiện khác bị hỏng.",
                     dapAn4 = "Không được phép.",
                     dapAnDung = "4",
+                    boDe = "4",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -340,6 +370,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Không được sử dụng.",
                     dapAn4 = "Được sử dụng nếu không có áo mưa.",
                     dapAnDung = "3",
+                    boDe = "4",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -349,6 +380,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Chỉ được thực hiện trên đường thật vắng.",
                     dapAn4 = "Chỉ được phép khi người đi xe đạp đã quá mệt.",
                     dapAnDung = "2",
+                    boDe = "4",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -358,6 +390,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Không được phép.",
                     dapAn4 = "",
                     dapAnDung = "3",
+                    boDe = "4",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -367,6 +400,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Chỉ được vận chuyển vật cồng kềnh trên xe máy nếu khoảng cách về nhà ngắn hơn 2 km.",
                     dapAn4 = "",
                     dapAnDung = "1",
+                    boDe = "4",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -376,6 +410,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "17 tuổi.",
                     dapAn4 = "",
                     dapAnDung = "2",
+                    boDe = "4",
                     chuDe = "Khái niệm và Quy tắc"
                 ),
                 LyThuyet(
@@ -1025,6 +1060,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Biển 1 và 3",
                     dapAn4 = "Cả ba biển",
                     dapAnDung = "2",
+                    boDe = "1",
                     hinhAnh = R.drawable.bbdb1,
                     chuDe = "Biển báo đường bộ"
                 ),
@@ -1035,6 +1071,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Biển 2 và 3",
                     dapAn4 = "",
                     dapAnDung = "1",
+                    boDe = "1",
                     hinhAnh = R.drawable.bbdb2,
                     chuDe = "Biển báo đường bộ"
                 ),
@@ -1045,6 +1082,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Cả hai biển",
                     dapAn4 = "",
                     dapAnDung = "3",
+                    boDe = "1",
                     hinhAnh = R.drawable.bbdb3,
                     chuDe = "Biển báo đường bộ"
                 ),
@@ -1055,6 +1093,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Biển 3",
                     dapAn4 = "",
                     dapAnDung = "1",
+                    boDe = "1",
                     hinhAnh = R.drawable.bbdb4,
                     chuDe = "Biển báo đường bộ"
                 ),
@@ -1065,6 +1104,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Biển 2 và 3",
                     dapAn4 = "Cả ba biển",
                     dapAnDung = "3",
+                    boDe = "1",
                     hinhAnh = R.drawable.bbdb5,
                     chuDe = "Biển báo đường bộ"
                 ),
@@ -1075,6 +1115,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Không biển nào",
                     dapAn4 = "Cả 2 biển",
                     dapAnDung = "2",
+                    boDe = "1",
                     hinhAnh = R.drawable.bbdb6,
                     chuDe = "Biển báo đường bộ"
                 ),
@@ -1085,6 +1126,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Cả hai biển",
                     dapAn4 = "",
                     dapAnDung = "1",
+                    boDe = "1",
                     hinhAnh = R.drawable.bbdb7,
                     chuDe = "Biển báo đường bộ"
                 ),
@@ -1095,6 +1137,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Không biển nào",
                     dapAn4 = "",
                     dapAnDung = "2",
+                    boDe = "1",
                     hinhAnh = R.drawable.bbdb8,
                     chuDe = "Biển báo đường bộ"
                 ),
@@ -1105,6 +1148,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Biển 2 và 3",
                     dapAn4 = "Cả ba biển",
                     dapAnDung = "1",
+                    boDe = "2",
                     hinhAnh = R.drawable.bbdb9,
                     chuDe = "Biển báo đường bộ"
                 ),
@@ -1115,6 +1159,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Biển 2 và 3",
                     dapAn4 = "Cả ba biển",
                     dapAnDung = "1",
+                    boDe = "2",
                     hinhAnh = R.drawable.bbdb10,
                     chuDe = "Biển báo đường bộ"
                 ),
@@ -1125,6 +1170,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Không biển nào",
                     dapAn4 = "",
                     dapAnDung = "2",
+                    boDe = "2",
                     hinhAnh = R.drawable.bbdb11,
                     chuDe = "Biển báo đường bộ"
                 ),
@@ -1135,6 +1181,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Cả 2 biển",
                     dapAn4 = "",
                     dapAnDung = "3",
+                    boDe = "2",
                     hinhAnh = R.drawable.bbdb12,
                     chuDe = "Biển báo đường bộ"
                 ),
@@ -1145,6 +1192,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Cả 2 biển",
                     dapAn4 = "",
                     dapAnDung = "1",
+                    boDe = "2",
                     hinhAnh = R.drawable.bbdb13,
                     chuDe = "Biển báo đường bộ"
                 ),
@@ -1155,6 +1203,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Cả ba biển",
                     dapAn4 = "",
                     dapAnDung = "2",
+                    boDe = "2",
                     hinhAnh = R.drawable.bbdb14,
                     chuDe = "Biển báo đường bộ"
                 ),
@@ -1165,6 +1214,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Biển 1 và 2",
                     dapAn4 = "",
                     dapAnDung = "3",
+                    boDe = "2",
                     hinhAnh = R.drawable.bbdb15,
                     chuDe = "Biển báo đường bộ"
                 ),
@@ -1175,6 +1225,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Cả ba biển",
                     dapAn4 = "",
                     dapAnDung = "2",
+                    boDe = "2",
                     hinhAnh = R.drawable.bbdb16,
                     chuDe = "Biển báo đường bộ"
                 ),
@@ -1185,6 +1236,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Cả hai biển",
                     dapAn4 = "",
                     dapAnDung = "1",
+                    boDe = "3",
                     hinhAnh = R.drawable.bbdb17,
                     chuDe = "Biển báo đường bộ"
                 ),
@@ -1195,6 +1247,7 @@ class MyDbHelper(context: Context) :
                     dapAn4 = "",
                     dapAn3 = "",
                     dapAnDung = "1",
+                    boDe = "3",
                     hinhAnh = R.drawable.bbdb18,
                     chuDe = "Biển báo đường bộ"
                 ),
@@ -1205,6 +1258,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "",
                     dapAn4 = "",
                     dapAnDung = "1",
+                    boDe = "3",
                     hinhAnh = R.drawable.bbdb19,
                     chuDe = "Biển báo đường bộ"
                 ),
@@ -1215,6 +1269,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Hướng trái và phải không cấm xe cơ giới",
                     dapAn4 = "",
                     dapAnDung = "2",
+                    boDe = "3",
                     hinhAnh = R.drawable.bbdb20,
                     chuDe = "Biển báo đường bộ"
                 ),
@@ -1225,6 +1280,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Báo cấm dùng còi có độ vang xa 500m",
                     dapAn4 = "",
                     dapAnDung = "2",
+                    boDe = "3",
                     hinhAnh = R.drawable.bbdb21,
                     chuDe = "Biển báo đường bộ"
                 ),
@@ -1235,6 +1291,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "",
                     dapAn4 = "",
                     dapAnDung = "2",
+                    boDe = "3",
                     hinhAnh = R.drawable.bbdb22,
                     chuDe = "Biển báo đường bộ"
                 ),
@@ -1245,6 +1302,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Biển 2 và 3",
                     dapAn4 = "",
                     dapAnDung = "2",
+                    boDe = "3",
                     hinhAnh = R.drawable.bbdb23,
                     chuDe = "Biển báo đường bộ"
                 ),
@@ -1255,6 +1313,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Biển 3",
                     dapAn4 = "",
                     dapAnDung = "2",
+                    boDe = "3",
                     hinhAnh = R.drawable.bbdb24,
                     chuDe = "Biển báo đường bộ"
                 ),
@@ -1265,6 +1324,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "",
                     dapAn4 = "",
                     dapAnDung = "1",
+                    boDe = "4",
                     hinhAnh = R.drawable.bbdb25,
                     chuDe = "Biển báo đường bộ"
                 ),
@@ -1275,6 +1335,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Được phép đỗ xe và dừng xe theo hướng bên phải",
                     dapAn4 = "",
                     dapAnDung = "2",
+                    boDe = "4",
                     hinhAnh = R.drawable.bbdb26,
                     chuDe = "Biển báo đường bộ"
                 ),
@@ -1285,6 +1346,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Cả 2 biển",
                     dapAn4 = "",
                     dapAnDung = "1",
+                    boDe = "4",
                     hinhAnh = R.drawable.bbdb27,
                     chuDe = "Biển báo đường bộ"
                 ),
@@ -1295,6 +1357,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "",
                     dapAn4 = "",
                     dapAnDung = "2",
+                    boDe = "4",
                     hinhAnh = R.drawable.bbdb28,
                     chuDe = "Biển báo đường bộ"
                 ),
@@ -1305,6 +1368,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "",
                     dapAn4 = "",
                     dapAnDung = "1",
+                    boDe = "4",
                     hinhAnh = R.drawable.bbdb29,
                     chuDe = "Biển báo đường bộ"
                 ),
@@ -1315,6 +1379,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "",
                     dapAn4 = "",
                     dapAnDung = "2",
+                    boDe = "4",
                     hinhAnh = R.drawable.bbdb30,
                     chuDe = "Biển báo đường bộ"
                 ),
@@ -1325,6 +1390,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Biển 3",
                     dapAn4 = "Biển 1 và 3",
                     dapAnDung = "1",
+                    boDe = "4",
                     hinhAnh = R.drawable.bbdb31,
                     chuDe = "Biển báo đường bộ"
                 ),
@@ -1335,6 +1401,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Biển 3",
                     dapAn4 = "Cả ba biển",
                     dapAnDung = "3",
+                    boDe = "4",
                     hinhAnh = R.drawable.bbdb32,
                     chuDe = "Biển báo đường bộ"
                 ),
@@ -1933,6 +2000,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Bấm còi và nháy đèn liên tục để cảnh báo xe khác.",
                     dapAn4 = "Tránh nhường đường để đi nhanh hơn.",
                     dapAnDung = "1",
+                    boDe = "1",
                     chuDe = "Văn hóa và đạo đức lái xe"
                 ),
 
@@ -1943,6 +2011,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Cả hai ý trên.",
                     dapAn4 = "",
                     dapAnDung = "3",
+                    boDe = "2",
                     chuDe = "Văn hóa và đạo đức lái xe"
                 ),
 
@@ -1953,6 +2022,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "",
                     dapAn4 = "",
                     dapAnDung = "1",
+                    boDe = "3",
                     chuDe = "Văn hóa và đạo đức lái xe"
                 ),
 
@@ -1963,6 +2033,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "",
                     dapAn4 = "",
                     dapAnDung = "1",
+                    boDe = "4",
                     chuDe = "Văn hóa và đạo đức lái xe"
                 ),
 
@@ -2033,6 +2104,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Cả hai ý trên.",
                     dapAn4 = "",
                     dapAnDung = "2",
+                    boDe = "1",
                     chuDe = "Câu điểm liệt"
                 ),
                 LyThuyet(
@@ -2042,6 +2114,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Cả hai ý trên.",
                     dapAn4 = "",
                     dapAnDung = "3",
+                    boDe = "2",
                     chuDe = " Câu điểm liệt "
                 ),
                 LyThuyet(
@@ -2051,6 +2124,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Được cơ quan có thẩm quyền cấp phép.",
                     dapAn4 = "",
                     dapAnDung = "3",
+                    boDe = "3",
                     chuDe = " Câu điểm liệt "
                 ),
                 LyThuyet(
@@ -2060,6 +2134,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "",
                     dapAn4 = "",
                     dapAnDung = "2",
+                    boDe = "4",
                     chuDe = " Câu điểm liệt "
                 ),
                 LyThuyet(
@@ -2213,6 +2288,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Sử dụng phanh trước để giảm tốc độ kết hợp với tắt chìa khóa điện của xe.",
                     dapAn4 = "",
                     dapAnDung = "1",
+                    boDe = "1",
                     chuDe = "Kỹ thuật lái xe"
                 ),
                 LyThuyet(
@@ -2222,6 +2298,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "",
                     dapAn4 = "",
                     dapAnDung = "1",
+                    boDe = "2",
                     chuDe = "Kỹ thuật lái xe"
                 ),
                 LyThuyet(
@@ -2231,6 +2308,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Cả hai ý trên.",
                     dapAn4 = "",
                     dapAnDung = "3",
+                    boDe = "3",
                     chuDe = "Kỹ thuật lái xe"
                 ),
                 LyThuyet(
@@ -2240,6 +2318,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Ý 1 và ý 2.",
                     dapAn4 = "",
                     dapAnDung = "2",
+                    boDe = "4",
                     chuDe = "Kỹ thuật lái xe"
                 ),
                 LyThuyet(
@@ -2348,6 +2427,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Chỉ xe con.",
                     dapAn4 = "",
                     dapAnDung = "3",
+                    boDe = "1",
                     hinhAnh = R.drawable.sh1,
                     chuDe = "Sa hình"
                 ),
@@ -2358,6 +2438,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Xe khách, xe tải, xe con, xe mô tô.",
                     dapAn4 = "Xe mô tô, xe khách, xe tải, xe con.",
                     dapAnDung = "2",
+                    boDe = "1",
                     hinhAnh = R.drawable.sh2,
                     chuDe = "Sa hình"
                 ),
@@ -2368,6 +2449,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Xe mô tô, xe con, xe tải.",
                     dapAn4 = "Xe con, xe mô tô, xe tải.",
                     dapAnDung = "3",
+                    boDe = "1",
                     hinhAnh = R.drawable.sh3,
                     chuDe = "Sa hình"
                 ),
@@ -2378,6 +2460,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "",
                     dapAn4 = "",
                     dapAnDung = "2",
+                    boDe = "1",
                     hinhAnh = R.drawable.sh4,
                     chuDe = "Sa hình"
                 ),
@@ -2388,6 +2471,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "",
                     dapAn4 = "",
                     dapAnDung = "2",
+                    boDe = "1",
                     hinhAnh = R.drawable.sh5,
                     chuDe = "Sa hình"
                 ),
@@ -2398,6 +2482,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "",
                     dapAn4 = "",
                     dapAnDung = "1",
+                    boDe = "1",
                     hinhAnh = R.drawable.sh6,
                     chuDe = "Sa hình"
                 ),
@@ -2408,6 +2493,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Xe tải, xe mô tô.",
                     dapAn4 = "",
                     dapAnDung = "2",
+                    boDe = "2",
                     hinhAnh = R.drawable.sh7,
                     chuDe = "Sa hình"
                 ),
@@ -2418,6 +2504,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Xe khách, xe con, xe mô tô.",
                     dapAn4 = "",
                     dapAnDung = "1",
+                    boDe = "2",
                     hinhAnh = R.drawable.sh8,
                     chuDe = "Sa hình"
                 ),
@@ -2428,6 +2515,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Xe mô tô, xe tải, xe khách, xe con.",
                     dapAn4 = "Xe mô tô, xe tải, xe con, xe khách.",
                     dapAnDung = "3",
+                    boDe = "2",
                     hinhAnh = R.drawable.sh9,
                     chuDe = "Sa hình"
                 ),
@@ -2438,6 +2526,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Cả ba xe.",
                     dapAn4 = "Xe con và xe tải.",
                     dapAnDung = "1",
+                    boDe = "2",
                     hinhAnh = R.drawable.sh10,
                     chuDe = "Sa hình"
                 ),
@@ -2448,6 +2537,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Chỉ hướng 1.",
                     dapAn4 = "",
                     dapAnDung = "1",
+                    boDe = "2",
                     hinhAnh = R.drawable.sh11,
                     chuDe = "Sa hình"
                 ),
@@ -2458,6 +2548,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Chỉ xe mô tô vi phạm.",
                     dapAn4 = "Chỉ xe tải vi phạm.",
                     dapAnDung = "1",
+                    boDe = "2",
                     hinhAnh = R.drawable.sh12,
                     chuDe = "Sa hình"
                 ),
@@ -2468,6 +2559,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Cả ba xe.",
                     dapAn4 = "Chỉ xe mô tô và xe tải.",
                     dapAnDung = "3",
+                    boDe = "3",
                     hinhAnh = R.drawable.sh13,
                     chuDe = "Sa hình"
                 ),
@@ -2478,6 +2570,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "",
                     dapAn4 = "",
                     dapAnDung = "2",
+                    boDe = "3",
                     hinhAnh = R.drawable.sh14,
                     chuDe = "Sa hình"
                 ),
@@ -2488,6 +2581,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Xe con (A), xe con (B), xe mô tô + xe đạp.",
                     dapAn4 = "Xe mô tô + xe đạp, xe con (A), xe con (B).",
                     dapAnDung = "4",
+                    boDe = "3",
                     hinhAnh = R.drawable.sh15,
                     chuDe = "Sa hình"
                 ),
@@ -2498,6 +2592,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "",
                     dapAn4 = "",
                     dapAnDung = "1",
+                    boDe = "3",
                     hinhAnh = R.drawable.sh16,
                     chuDe = "Sa hình"
                 ),
@@ -2508,6 +2603,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Xe con.",
                     dapAn4 = "Xe con và xe mô tô.",
                     dapAnDung = "3",
+                    boDe = "3",
                     hinhAnh = R.drawable.sh17,
                     chuDe = "Sa hình"
                 ),
@@ -2518,6 +2614,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Tất cả xe phải dừng lại trừ xe đã ở trong ngã tư.",
                     dapAn4 = "",
                     dapAnDung = "3",
+                    boDe = "3",
                     hinhAnh = R.drawable.sh18,
                     chuDe = "Sa hình"
                 ),
@@ -2528,6 +2625,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Xe mô tô, xe tải.",
                     dapAn4 = "Cả ba xe.",
                     dapAnDung = "3",
+                    boDe = "4",
                     hinhAnh = R.drawable.sh19,
                     chuDe = "Sa hình"
                 ),
@@ -2538,6 +2636,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Không xe nào đúng.",
                     dapAn4 = "",
                     dapAnDung = "2",
+                    boDe = "4",
                     hinhAnh = R.drawable.sh20,
                     chuDe = "Sa hình"
                 ),
@@ -2548,6 +2647,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Hướng 1 và 3.",
                     dapAn4 = "Hướng 2 và 3.",
                     dapAnDung = "3",
+                    boDe = "4",
                     hinhAnh = R.drawable.sh21,
                     chuDe = "Sa hình"
                 ),
@@ -2558,6 +2658,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Mô tô + Con → Quân sự → Công an.",
                     dapAn4 = "",
                     dapAnDung = "2",
+                    boDe = "4",
                     hinhAnh = R.drawable.sh22,
                     chuDe = "Sa hình"
                 ),
@@ -2568,6 +2669,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Xe khách (B), xe mô tô (C).",
                     dapAn4 = "Xe khách (B), xe mô tô (D).",
                     dapAnDung = "1",
+                    boDe = "4",
                     hinhAnh = R.drawable.sh23,
                     chuDe = "Sa hình"
                 ),
@@ -2578,6 +2680,7 @@ class MyDbHelper(context: Context) :
                     dapAn3 = "Xe con (E), xe mô tô (D).",
                     dapAn4 = "Tất cả.",
                     dapAnDung = "3",
+                    boDe = "4",
                     hinhAnh = R.drawable.sh24,
                     chuDe = "Sa hình"
                 ),
