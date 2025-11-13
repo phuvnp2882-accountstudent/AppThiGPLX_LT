@@ -1,23 +1,29 @@
 package com.example.appthigplx_lt
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.ui.tooling.preview.Preview
-
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.runtime.mutableIntStateOf
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -26,190 +32,220 @@ fun OnLyThuyet(navController: NavController, chuDe: String) {
     val db = remember { MyDbHelper(context) }
 
     var listLyThuyet by remember { mutableStateOf(listOf<LyThuyet>()) }
-    var currentIndex by remember { mutableStateOf(0) }
+    var currentIndex by remember { mutableIntStateOf(0) }
     var selectedAnswer by remember { mutableStateOf<String?>(null) }
     var showResult by remember { mutableStateOf(false) }
-    var tongCau by remember { mutableStateOf(0) }
-    var soCauDung by remember { mutableStateOf(0) }
-    // 🔹 Nạp dữ liệu câu hỏi chưa đúng
+
+    val mintColor = Color(0xFF00C4A7)
+
+    fun getAnswerText(q: LyThuyet, key: String?): String {
+        return when (key) {
+            "1" -> q.dapAn1
+            "2" -> q.dapAn2
+            "3" -> q.dapAn3
+            "4" -> q.dapAn4
+            else -> ""
+        }
+    }
+
+    // 📘 Lấy câu hỏi và lọc những câu chưa đúng
     LaunchedEffect(Unit) {
         db.createDefaultLyThuyet()
-        val all = db.getLyThuyetTheoChuDe(chuDe)
-        val chuaDung = all.filter { !db.isAnsweredCorrectly(chuDe, it.cauHoi) }
-        listLyThuyet = chuaDung
-        tongCau = all.size
-        soCauDung = db.getCorrectCount(chuDe)
+
+        // Lấy tất cả câu hỏi của chủ đề
+        val allQuestions = db.getLyThuyetTheoChuDe(chuDe)
+
+        // Lấy danh sách các câu đã làm đúng
+        val cauDaLamDung = db.getCorrectQuestions(chuDe)
+
+        // Lọc bỏ các câu đã đúng
+        val filtered = allQuestions.filter { it.cauHoi !in cauDaLamDung }
+
+        // Nếu đã làm đúng hết, load lại toàn bộ để ôn tập
+        listLyThuyet = filtered.ifEmpty { allQuestions }
     }
 
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Ôn tập: $chuDe") },
+                title = {
+                    Text(
+                        text = "ÔN TẬP: ${chuDe.uppercase()}",
+                        fontSize = 18.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color.White
+                    )
+                },
                 navigationIcon = {
                     IconButton(onClick = { navController.popBackStack() }) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = "Quay lại")
+                        Icon(
+                            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                            contentDescription = "Quay lại",
+                            tint = Color.White
+                        )
                     }
-                }
+                },
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = mintColor)
             )
         }
     ) { padding ->
         if (listLyThuyet.isEmpty()) {
-            // ✅ Nếu đã làm đúng hết
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                Text(
-                    text = "🎉 Bạn đã hoàn thành toàn bộ câu hỏi của chủ đề này!",
-                    fontSize = 18.sp,
-                    fontWeight = FontWeight.Bold,
-                    color = MaterialTheme.colorScheme.primary,
-                    modifier = Modifier.padding(24.dp)
-                )
+                Text("Không có dữ liệu câu hỏi", fontSize = 18.sp)
             }
         } else {
-            val currentQuestion = listLyThuyet[currentIndex]
-            val progress = soCauDung / tongCau.toFloat()
+            val current = listLyThuyet[currentIndex]
 
             LazyColumn(
                 modifier = Modifier
                     .padding(padding)
-                    .padding(16.dp)
-                    .fillMaxSize(),
-                verticalArrangement = Arrangement.spacedBy(16.dp)
+                    .fillMaxSize()
+                    .padding(16.dp),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(12.dp)
             ) {
-                // 🔹 Thanh tiến độ
+                // --- Câu hỏi ---
                 item {
-                    LinearProgressIndicator(
-                        progress = progress,
-                        modifier = Modifier.fillMaxWidth(),
-                        color = MaterialTheme.colorScheme.primary
-                    )
-                    Text(
-                        text = "Tiến độ: $soCauDung/$tongCau câu đúng",
-                        fontSize = 15.sp,
-                        color = MaterialTheme.colorScheme.primary,
-                        modifier = Modifier.padding(top = 6.dp)
-                    )
-                    Spacer(modifier = Modifier.height(8.dp))
-                    Text(
-                        text = "Câu ${currentIndex + 1}/${listLyThuyet.size}",
-                        fontSize = 18.sp,
-                        fontWeight = FontWeight.Bold
-                    )
-                    Text(
-                        text = currentQuestion.cauHoi,
-                        fontSize = 18.sp,
-                        fontWeight = FontWeight.Medium
-                    )
-
-                    // 🔹 Hiển thị hình ảnh nếu có
-                    if (currentQuestion.hinhAnh != null && currentQuestion.hinhAnh != 0) {
-                        Spacer(modifier = Modifier.height(8.dp))
-                        Image(
-                            painter = painterResource(id = currentQuestion.hinhAnh),
-                            contentDescription = "Hình minh họa",
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .height(180.dp)
-                        )
+                    Box(
+                        modifier = Modifier
+                            .width(350.dp)
+                            .clip(RoundedCornerShape(15.dp))
+                            .border(
+                                width = 2.dp,
+                                color = mintColor,
+                                shape = RoundedCornerShape(15.dp)
+                            )
+                            .background(Color(0xFFF5F5F5))
+                            .padding(12.dp)
+                    ) {
+                        Column {
+                            Text(
+                                text = "CÂU ${currentIndex + 1}/${listLyThuyet.size}",
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 15.sp,
+                                color = mintColor
+                            )
+                            Spacer(modifier = Modifier.height(6.dp))
+                            Text(
+                                text = current.cauHoi,
+                                fontSize = 17.sp,
+                                fontWeight = FontWeight.Medium,
+                                color = Color.Black
+                            )
+                        }
                     }
-
-                    Spacer(modifier = Modifier.height(8.dp))
                 }
 
-                // 🔹 Danh sách đáp án
+                // --- Hình minh họa ---
+                if (current.hinhAnh != null && current.hinhAnh != 0) {
+                    item {
+                        Image(
+                            painter = painterResource(id = current.hinhAnh),
+                            contentDescription = null,
+                            modifier = Modifier
+                                .width(350.dp)
+                                .height(160.dp)
+                                .clip(RoundedCornerShape(12.dp))
+                        )
+                    }
+                }
+
+                // --- Danh sách đáp án ---
                 items(
                     listOf(
-                        "1" to currentQuestion.dapAn1,
-                        "2" to currentQuestion.dapAn2,
-                        "3" to currentQuestion.dapAn3,
-                        "4" to currentQuestion.dapAn4
+                        "1" to current.dapAn1,
+                        "2" to current.dapAn2,
+                        "3" to current.dapAn3,
+                        "4" to current.dapAn4
                     ).filter { it.second.isNotBlank() }
                 ) { (key, text) ->
                     val isSelected = selectedAnswer == key
-                    val isCorrect = currentQuestion.dapAnDung == key
+                    val isCorrect = current.dapAnDung == key
 
-                    val color = when {
-                        !showResult -> MaterialTheme.colorScheme.surfaceVariant
-                        isSelected && isCorrect -> MaterialTheme.colorScheme.primaryContainer
-                        isSelected && !isCorrect -> MaterialTheme.colorScheme.errorContainer
-                        isCorrect -> MaterialTheme.colorScheme.primaryContainer
-                        else -> MaterialTheme.colorScheme.surfaceVariant
+                    val backgroundColor = when {
+                        !showResult && isSelected -> Color(0xFFE0F7FA)
+                        showResult && isCorrect -> Color(0xFFC8E6C9)
+                        showResult && isSelected && !isCorrect -> Color(0xFFFFCDD2)
+                        else -> Color.White
                     }
 
-                    Button(
+                    OutlinedButton(
                         onClick = {
                             if (!showResult) {
                                 selectedAnswer = key
                                 showResult = true
-                                if (isCorrect) {
-                                    db.saveCorrectAnswer(chuDe, currentQuestion.cauHoi)
-                                    soCauDung++
+                                if (key == current.dapAnDung) {
+                                    db.saveCorrectAnswer(chuDe, current.cauHoi) // 🟢 Lưu câu đúng
                                 }
                             }
                         },
-                        colors = ButtonDefaults.buttonColors(containerColor = color),
-                        modifier = Modifier.fillMaxWidth()
+                        modifier = Modifier
+                            .width(350.dp)
+                            .clip(RoundedCornerShape(10.dp))
+                            .padding(vertical = 3.dp),
+                        colors = ButtonDefaults.outlinedButtonColors(
+                            containerColor = backgroundColor,
+                            contentColor = Color.Black
+                        ),
+                        border = BorderStroke(2.dp, Color.Transparent)
                     ) {
-                        Text(text = text, fontSize = 16.sp)
+                        Text(
+                            text = text,
+                            fontSize = 16.sp,
+                            textAlign = TextAlign.Start,
+                            color = Color.Black,
+                            modifier = Modifier.fillMaxWidth()
+                        )
                     }
                 }
 
-                // 🔹 Kết quả & Nút tiếp theo
+                // --- Giải thích + nút Câu sau ---
                 if (showResult) {
                     item {
-                        Spacer(modifier = Modifier.height(12.dp))
-                        val isCorrect = selectedAnswer == currentQuestion.dapAnDung
-                        Text(
-                            text = if (isCorrect)
-                                "✅ Chính xác!"
-                            else
-                                "❌ Sai rồi. Đáp án đúng là: ${currentQuestion.dapAnDung}",
-                            color = if (isCorrect) MaterialTheme.colorScheme.primary
-                            else MaterialTheme.colorScheme.error,
-                            fontSize = 16.sp,
-                            fontWeight = FontWeight.SemiBold
-                        )
+                        val isCorrect = selectedAnswer == current.dapAnDung
+                        val color = if (isCorrect) Color(0xFF00C853) else Color(0xFFD32F2F)
+                        val correctText = getAnswerText(current, current.dapAnDung)
 
-                        Spacer(modifier = Modifier.height(16.dp))
-                        Button(
-                            onClick = {
-                                if (currentIndex < listLyThuyet.size - 1) {
-                                    currentIndex++
-                                    selectedAnswer = null
-                                    showResult = false
-                                } else {
-                                    // Khi đã hết câu chưa đúng -> reload để cập nhật
-                                    val chuaDung = db.getLyThuyetTheoChuDe(chuDe)
-                                        .filter { !db.isAnsweredCorrectly(chuDe, it.cauHoi) }
-                                    listLyThuyet = chuaDung
-                                    currentIndex = 0
-                                    selectedAnswer = null
-                                    showResult = false
-                                }
-                            },
-                            modifier = Modifier.fillMaxWidth()
+                        Box(
+                            modifier = Modifier
+                                .width(350.dp)
+                                .clip(RoundedCornerShape(10.dp))
+                                .background(Color(0xFFE8F5E9))
+                                .padding(12.dp)
                         ) {
                             Text(
-                                text = if (currentIndex < listLyThuyet.size - 1)
-                                    "Câu tiếp theo"
+                                text = if (isCorrect)
+                                    "✅ Đáp án chính xác!"
                                 else
-                                    "Cập nhật tiến độ",
+                                    "❌ Sai rồi. Đáp án đúng là: $correctText",
+                                fontWeight = FontWeight.Bold,
+                                color = color,
                                 fontSize = 16.sp
                             )
                         }
 
-                        Spacer(modifier = Modifier.height(40.dp))
+                        Spacer(modifier = Modifier.height(12.dp))
+
+                        Button(
+                            onClick = {
+                                if (currentIndex < listLyThuyet.size - 1) {
+                                    currentIndex++
+                                } else {
+                                    currentIndex = 0
+                                }
+                                showResult = false
+                                selectedAnswer = null
+                            },
+                            modifier = Modifier
+                                .width(350.dp)
+                                .clip(RoundedCornerShape(10.dp)),
+                            colors = ButtonDefaults.buttonColors(containerColor = mintColor)
+                        ) {
+                            Text("Câu sau", color = Color.White, fontSize = 16.sp)
+                        }
                     }
                 }
             }
         }
-    }
-}
-
-@Preview(showBackground = true, showSystemUi = true)
-@Composable
-fun PreviewOnLyThuyet() {
-    MaterialTheme {
-        val fakeNav = androidx.navigation.compose.rememberNavController()
-        OnLyThuyet(fakeNav, "Câu điểm liệt")
     }
 }
