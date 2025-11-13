@@ -1,11 +1,21 @@
 package com.example.appthigplx_lt
 
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.*
-import androidx.compose.runtime.Composable
+import androidx.compose.material3.LinearProgressIndicator
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -17,19 +27,43 @@ import androidx.navigation.compose.rememberNavController
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun Home(navController: NavController) {
+
+    // 🔹 Lấy dữ liệu tiến độ từ SQLite
+    val context = LocalContext.current
+    val db = remember { MyDbHelper(context) }
+
+    var soCauDung by remember { mutableIntStateOf(0) }
+    var tongCau by remember { mutableIntStateOf(250) }
+
+    LaunchedEffect(Unit) {
+        soCauDung = db.getTotalCorrectCount()
+        // tongCau = db.getTotalQuestionCount() // nếu có
+    }
+
+    val tiLe = if (tongCau > 0) soCauDung.toFloat() / tongCau else 0f
+
     Scaffold(
         topBar = {
             TopAppBar(
                 title = {
                     Text(
                         "HẠNG THI A1",
-                        fontSize = 20.sp,
-                        fontWeight = FontWeight.Bold
+                        color = Color.White,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 20.sp
                     )
                 },
+                actions = {
+                    IconButton(onClick = { /* TODO: mở cài đặt */ }) {
+                        Icon(
+                            imageVector = Icons.Default.Settings,
+                            contentDescription = "Cài đặt",
+                            tint = Color.White
+                        )
+                    }
+                },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Color(0xFF1976D2),
-                    titleContentColor = Color.White
+                    containerColor = Color(0xFF00BFA6)
                 )
             )
         }
@@ -38,137 +72,149 @@ fun Home(navController: NavController) {
             modifier = Modifier
                 .padding(padding)
                 .fillMaxSize()
+                .background(Color(0xFFF8F8F8)),
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            // Header section
-            Column(
+            Spacer(modifier = Modifier.height(12.dp))
+
+            // Ảnh bìa
+            Card(
+                shape = RoundedCornerShape(8.dp),
+                elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(16.dp),
-                horizontalAlignment = Alignment.CenterHorizontally
+                    .width(200.dp)
+                    .height(260.dp)
             ) {
-                Text(
-                    "250 CÂU HỎI",
-                    fontSize = 16.sp,
-                    fontWeight = FontWeight.Bold,
-                    color = Color(0xFF1976D2)
+                Image(
+                    painter = painterResource(id = R.drawable.bia_250_cauhoi),
+                    contentDescription = null,
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier.fillMaxSize()
                 )
-                Text(
-                    "ĐỘNG CHI KHÔI LÀM XE HẠNG ẢA SÁI",
-                    fontSize = 14.sp,
-                    textAlign = TextAlign.Center,
-                    color = Color.Gray
-                )
+            }
 
-                Spacer(modifier = Modifier.height(16.dp))
+            Spacer(modifier = Modifier.height(16.dp))
 
-                // Progress section
-                Card(
-                    modifier = Modifier.fillMaxWidth(),
-                    elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
+            // 🔹 Tiến độ ôn tập
+            Card(
+                shape = RoundedCornerShape(10.dp),
+                elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
+                modifier = Modifier
+                    .padding(horizontal = 24.dp)
+                    .fillMaxWidth()
+            ) {
+                Column(
+                    modifier = Modifier
+                        .padding(12.dp)
+                        .fillMaxWidth(),
+                    horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    Column(
-                        modifier = Modifier.padding(16.dp)
-                    ) {
-                        Text(
-                            "TIẾN ĐỘ ÔN TẬP",
-                            fontSize = 14.sp,
-                            fontWeight = FontWeight.Medium
-                        )
-                        Spacer(modifier = Modifier.height(8.dp))
-                        Text(
-                            "112/250 câu",
-                            fontSize = 18.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = Color(0xFF1976D2)
-                        )
-                        Spacer(modifier = Modifier.height(8.dp))
-                        LinearProgressIndicator(
-                            progress = 112f / 250f,
-                            modifier = Modifier.fillMaxWidth(),
-                            color = Color(0xFF1976D2)
-                        )
-                    }
+                    Text("TIẾN ĐỘ ÔN TẬP 🔥", fontWeight = FontWeight.Medium, fontSize = 16.sp)
+                    Spacer(modifier = Modifier.height(6.dp))
+                    LinearProgressIndicator(
+                        progress = { tiLe },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(8.dp)
+                            .clip(RoundedCornerShape(4.dp)),
+                        color = Color(0xFF00BFA6),
+                        trackColor = ProgressIndicatorDefaults.linearTrackColor,
+                        strokeCap = ProgressIndicatorDefaults.LinearStrokeCap,
+                    )
+                    Spacer(modifier = Modifier.height(6.dp))
+                    Text("$soCauDung/$tongCau câu", fontSize = 14.sp, color = Color.Gray)
                 }
             }
 
             Spacer(modifier = Modifier.height(24.dp))
 
-            // Main buttons section
+            // 🔹 Lưới 2x2 các nút có hình
             Column(
                 modifier = Modifier
-                    .padding(horizontal = 24.dp)
-                    .weight(1f),
-                verticalArrangement = Arrangement.spacedBy(20.dp, Alignment.CenterVertically),
+                    .fillMaxWidth()
+                    .padding(horizontal = 24.dp),
+                verticalArrangement = Arrangement.spacedBy(16.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                FilledTonalButton(
-                    onClick = { navController.navigate("chonBoDe") },
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(60.dp),
-                    colors = ButtonDefaults.filledTonalButtonColors(
-                        containerColor = Color(0xFF1976D2)
-                    )
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(16.dp)
                 ) {
-                    Text(
-                        "THI THỬ",
-                        fontSize = 18.sp,
-                        fontWeight = FontWeight.Bold,
-                        color = Color.White
-                    )
+                    HomeImageButton(
+                        text = "THI THỬ",
+                        imageRes = R.drawable.ic_thi_thu,
+                        background = Color(0xFF00BFA6),
+                        modifier = Modifier.weight(1f)
+                    ) { navController.navigate("chonBoDe") }
+
+                    HomeImageButton(
+                        text = "ÔN LÝ THUYẾT",
+                        imageRes = R.drawable.ic_ly_thuyet,
+                        background = Color(0xFF0288D1),
+                        modifier = Modifier.weight(1f)
+                    ) { navController.navigate("onTheoChuDe") }
                 }
 
-                FilledTonalButton(
-                    onClick = { navController.navigate("hocLyThuyet") },
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(60.dp),
-                    colors = ButtonDefaults.filledTonalButtonColors(
-                        containerColor = Color(0xFF1976D2)
-                    )
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(16.dp)
                 ) {
-                    Text(
-                        "HỌC LÝ THUYẾT",
-                        fontSize = 18.sp,
-                        fontWeight = FontWeight.Bold,
-                        color = Color.White
-                    )
-                }
+                    HomeImageButton(
+                        text = "TRA CỨU BIỂN BÁO",
+                        imageRes = R.drawable.ic_bien_bao,
+                        background = Color(0xFFD32F2F),
+                        modifier = Modifier.weight(1f)
+                    ) { navController.navigate("traCuuBienBao") }
 
-                FilledTonalButton(
-                    onClick = { navController.navigate("traCuuBienBao") },
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(60.dp),
-                    colors = ButtonDefaults.filledTonalButtonColors(
-                        containerColor = Color(0xFF1976D2)
-                    )
-                ) {
-                    Text(
-                        "TRA CỨU BIẾN BÁO",
-                        fontSize = 18.sp,
-                        fontWeight = FontWeight.Bold,
-                        color = Color.White
-                    )
-                }
-
-                FilledTonalButton(
-                    onClick = { navController.navigate("meoOnThi") },
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(60.dp),
-                    colors = ButtonDefaults.filledTonalButtonColors(
-                        containerColor = Color(0xFF1976D2)
-                    )
-                ) {
-                    Text(
-                        "MẸO ÔN THI",
-                        fontSize = 18.sp,
-                        fontWeight = FontWeight.Bold,
-                        color = Color.White
-                    )
+                    HomeImageButton(
+                        text = "MẸO ÔN THI",
+                        imageRes = R.drawable.ic_meo,
+                        background = Color(0xFFFFC107),
+                        textColor = Color.Black,
+                        modifier = Modifier.weight(1f)
+                    ) { navController.navigate("meoOnThi") }
                 }
             }
+
+            Spacer(modifier = Modifier.height(20.dp))
+        }
+    }
+}
+
+@Composable
+fun HomeImageButton(
+    text: String,
+    imageRes: Int,
+    background: Color,
+    textColor: Color = Color.White,
+    modifier: Modifier = Modifier,
+    onClick: () -> Unit
+) {
+    Button(
+        onClick = onClick,
+        colors = ButtonDefaults.buttonColors(containerColor = background),
+        shape = RoundedCornerShape(16.dp),
+        modifier = modifier.height(100.dp)
+    ) {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ) {
+            Image(
+                painter = painterResource(id = imageRes),
+                contentDescription = text,
+                modifier = Modifier
+                    .size(50.dp)
+                    .padding(bottom = 6.dp),
+                contentScale = ContentScale.Fit
+            )
+            Text(
+                text = text,
+                color = textColor,
+                fontWeight = FontWeight.Bold,
+                fontSize = 14.sp,
+                textAlign = TextAlign.Center
+            )
         }
     }
 }
@@ -176,10 +222,7 @@ fun Home(navController: NavController) {
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun HomePreview() {
-    MaterialTheme {
-        val navController = rememberNavController()
-        Home(navController)
-    }
+    val navController = rememberNavController()
+    Home(navController)
 }
-
 
