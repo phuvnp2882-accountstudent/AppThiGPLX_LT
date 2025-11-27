@@ -7,7 +7,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.*
-import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -18,17 +17,17 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import androidx.compose.ui.tooling.preview.Preview
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun Home(navController: NavController) {
 
-    // 🔹 Lấy dữ liệu tiến độ từ SQLite
+    // Lấy tiến độ từ SQLite
     val context = LocalContext.current
     val db = remember { MyDbHelper(context) }
 
@@ -37,7 +36,6 @@ fun Home(navController: NavController) {
 
     LaunchedEffect(Unit) {
         soCauDung = db.getTotalCorrectCount()
-        // tongCau = db.getTotalQuestionCount() // nếu có
     }
 
     val tiLe = if (tongCau > 0) soCauDung.toFloat() / tongCau else 0f
@@ -54,7 +52,7 @@ fun Home(navController: NavController) {
                     )
                 },
                 actions = {
-                    IconButton(onClick = { /* TODO: mở cài đặt */ }) {
+                    IconButton(onClick = { /* mở cài đặt */ }) {
                         Icon(
                             imageVector = Icons.Default.Settings,
                             contentDescription = "Cài đặt",
@@ -68,6 +66,7 @@ fun Home(navController: NavController) {
             )
         }
     ) { padding ->
+
         Column(
             modifier = Modifier
                 .padding(padding)
@@ -75,27 +74,36 @@ fun Home(navController: NavController) {
                 .background(Color(0xFFF8F8F8)),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Spacer(modifier = Modifier.height(12.dp))
 
-            // Ảnh bìa
+            // ==============================
+            //   ẢNH BÌA – CHIẾM TOÀN BỘ PHẦN TRÊN
+            // ==============================
             Card(
                 shape = RoundedCornerShape(8.dp),
                 elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
                 modifier = Modifier
-                    .width(200.dp)
-                    .height(260.dp)
+                    .padding(top = 16.dp, start = 24.dp, end = 24.dp)
+                    .fillMaxWidth()
+                    .weight(1f)
             ) {
-                Image(
-                    painter = painterResource(id = R.drawable.bia_250_cauhoi),
-                    contentDescription = null,
-                    contentScale = ContentScale.Crop,
-                    modifier = Modifier.fillMaxSize()
-                )
+                Box(
+                    modifier = Modifier.fillMaxSize(),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Image(
+                        painter = painterResource(id = R.drawable.bia_250_cauhoi),
+                        contentDescription = null,
+                        contentScale = ContentScale.FillHeight,
+                        modifier = Modifier.fillMaxHeight()
+                    )
+                }
             }
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            // 🔹 Tiến độ ôn tập
+            // ==============================
+            //   TIẾN ĐỘ ÔN TẬP
+            // ==============================
             Card(
                 shape = RoundedCornerShape(10.dp),
                 elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
@@ -110,7 +118,9 @@ fun Home(navController: NavController) {
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Text("TIẾN ĐỘ ÔN TẬP 🔥", fontWeight = FontWeight.Medium, fontSize = 16.sp)
+
                     Spacer(modifier = Modifier.height(6.dp))
+
                     LinearProgressIndicator(
                         progress = { tiLe },
                         modifier = Modifier
@@ -118,17 +128,24 @@ fun Home(navController: NavController) {
                             .height(8.dp)
                             .clip(RoundedCornerShape(4.dp)),
                         color = Color(0xFF00BFA6),
-                        trackColor = ProgressIndicatorDefaults.linearTrackColor,
-                        strokeCap = ProgressIndicatorDefaults.LinearStrokeCap,
+                        trackColor = ProgressIndicatorDefaults.linearTrackColor
                     )
+
                     Spacer(modifier = Modifier.height(6.dp))
-                    Text("$soCauDung/$tongCau câu", fontSize = 14.sp, color = Color.Gray)
+
+                    Text(
+                        "$soCauDung/$tongCau câu",
+                        fontSize = 14.sp,
+                        color = Color.Gray
+                    )
                 }
             }
 
             Spacer(modifier = Modifier.height(24.dp))
 
-            // 🔹 Lưới 2x2 các nút có hình
+            // ==============================
+            //   LƯỚI 4 NÚT – NẰM Ở DƯỚI CÙNG
+            // ==============================
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -136,6 +153,7 @@ fun Home(navController: NavController) {
                 verticalArrangement = Arrangement.spacedBy(16.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
+
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.spacedBy(16.dp)
@@ -225,4 +243,3 @@ fun HomePreview() {
     val navController = rememberNavController()
     Home(navController)
 }
-
